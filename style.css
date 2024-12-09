@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar awal transparan */
+.navbar {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar solid saat scroll */
+.navbar.scrolled {
+    background: #ffffff;
+    /* Warna solid */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    /* Tambahkan bayangan */
+}
+
+/* Warna teks pada navbar */
+.navbar a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Ubah warna teks saat navbar solid */
+.navbar.scrolled a {
+    color: #000;
+}
+
+/* Tambahan untuk menu "Donate" */
+.navbar .btn-success {
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.scrolled .btn-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.logo-navbar {
+    max-height: 50px;
+    /* Atur tinggi maksimum logo sesuai dengan tinggi navbar */
+    height: auto;
+    /* Menjaga rasio aspek logo */
+    width: auto;
+    /* Membiarkan lebar menyesuaikan secara proporsional */
+}
+
+/* Hero section */
+.hero-section {
+    background: url('https://cdn.usegalileo.ai/sdxl10/47482ffe-7be8-49d1-b28c-32cdb2c57add.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section h1,
+.hero-section p {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.our-approach h2,
+.our-goals h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #e5e7eb;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.btn-design {
+    display: inline-block;
+    background-color: #6AB83A;
+    /* Warna hijau sesuai gambar */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* Atur padding sesuai ukuran tombol */
+    border-radius: 22px;
+    /* Membuat sudut melengkung */
+    transition: background-color 0.3s ease;
+    /* Animasi hover */
+    border: none;
+    /* Hilangkan border default */
+    font-family: Arial, sans-serif;
+    /* Pastikan font sesuai */
+}
+
+h4 {
+    color: #000;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #f8f8f8;
+}
