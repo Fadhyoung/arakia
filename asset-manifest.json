@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/arakia/static/css/main.13066133.css",
-    "main.js": "/arakia/static/js/main.78570629.js",
+    "main.css": "/arakia/static/css/main.901cbe57.css",
+    "main.js": "/arakia/static/js/main.82006aea.js",
     "static/js/488.0f6985ea.chunk.js": "/arakia/static/js/488.0f6985ea.chunk.js",
     "index.html": "/arakia/index.html",
-    "main.13066133.css.map": "/arakia/static/css/main.13066133.css.map",
-    "main.78570629.js.map": "/arakia/static/js/main.78570629.js.map",
+    "main.901cbe57.css.map": "/arakia/static/css/main.901cbe57.css.map",
+    "main.82006aea.js.map": "/arakia/static/js/main.82006aea.js.map",
     "488.0f6985ea.chunk.js.map": "/arakia/static/js/488.0f6985ea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13066133.css",
-    "static/js/main.78570629.js"
+    "static/css/main.901cbe57.css",
+    "static/js/main.82006aea.js"
   ]
 }
