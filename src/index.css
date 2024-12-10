@@ -48,3 +48,24 @@ code {
 .box-shadow-2 { box-shadow: 8px 4px 20px 5px rgb(0, 0, 0, 0.25);}
 .box-shadow-3 { box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.15);}
 .box-shadow-4 { box-shadow: 0px 30px 30px 0px rgb(0, 0, 0, 0.08);}
+
+.client-scroll-wrapper {
+  width: 83.33%;
+  padding: 1.2rem;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: start;
+  align-items: center;
+  overflow-x: scroll;
+  cursor: grab
+}
+
+/* Styling for webkit browsers like Chrome, Safari, Opera */
+
+::-webkit-scrollbar {
+  width:4px; height:4px;
+}
+
+.client-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
