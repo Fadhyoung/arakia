@@ -32,9 +32,9 @@ export default function LandingPage () {
             </div>
 
             {/** APPROACH SECTION */}
-            <div className='w-full h-full lg:px-20 xs:p-10 mt-24 flex flex-col gap-5 items-center'>
+            <div className='w-full h-full lg:px-20 xs:px-10 mt-20 flex flex-col gap-5 items-center'>
                 <h2 className='text-[24px] font-black text-gray-200'>Our Approach</h2>
-                <div className='w-full flex lg:gap-14 xs:gap-5 lg:justify-center xs:justify-end'>
+                <div className='w-full flex lg:gap-10 xs:gap-5 lg:justify-center xs:justify-between'>
                 <Button1 />
                 <Button1 />                            
                 <Button1 />
