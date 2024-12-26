@@ -1,0 +1,36 @@
+{
+    "CompanyProfile" : {
+        "desc1" : "CV Amanah Citra Cendekia (ARAKIA) adalah perusahaan yang bergerak di berbagai lini usaha strategis, yaitu konsultansi, telekomunikasi, agribisnis, jasa konstruksi, dan perdagangan bebas. Dengan filosofi intelektualitas, etika, dan kesederhanaan, ARAKIA mengusung pendekatan inovatif untuk menciptakan nilai tambah bagi masyarakat dan pembangunan daerah."
+    },
+    "Mission": [
+        {
+            "title": "Konsultansi, Telekomunikasi, Keilmuan, dan Riset",
+            "desc": "Memberikan layanan konsultansi dan riset berbasis data yang berkualitas untuk mendukung pengambilan keputusan yang strategis."
+        }, {
+            "title": "Pertanian dan Peternakan",
+            "desc": "Mengoptimalkan potensi agribisnis lokal dengan pendekatan teknologi modern untuk meningkatkan produktivitas dan kesejahteraan petani serta peternak. Menyediakan produk-produk unggulan yang berorientasi pada kualitas dan keberlanjutan."
+        }, {
+            "title": "Jasa Konstruksi",
+            "desc": "Menghadirkan solusi konstruksi yang inovatif dan berfokus pada efisiensi, estetika, serta ramah lingkungan."
+        }, {
+            "title": "Perdagangan Bebas",
+            "desc": "Mengelola perdagangan barang dan jasa yang kompetitif dengan menjaga kualitas dan integritas dalam setiap transaksi."
+        }
+    ]
+    ,
+    "CompanyFeatures": [
+        {
+            "title": "Keilmuan, dan Riset",
+            "desc": "Fokus pada layanan konsultasi Kajian Lingkungan, Analisis Dampak Lalu Lintas, Kajian Bangunan Gedung , riset keilmuan, serta solusi telekomunikasi."
+        }, {
+            "title": "Pertanian dan Peternakan",
+            "desc": "Menyediakan produk agribisnis unggulan dan layanan manajemen peternakan."
+        }, {
+            "title": "Jasa Konstruksi",
+            "desc": "Berfokus pada perencanaan, desain, dan pembangunan infrastruktur berkualitas tinggi."
+        }, {
+            "title": "Perdagangan Bebas",
+            "desc": "Memfasilitasi distribusi barang dan jasa secara lokal maupun internasional."
+        }
+    ]
+}
