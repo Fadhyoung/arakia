@@ -1,5 +1,6 @@
 {
   "name": "arakia-company-profile",
+  "homepage": "https://Fadhyoung.github.io/arakia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "arakia-company-profile": "file:",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

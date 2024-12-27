@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'xs': '320px', // Custom breakpoint for iPhone 13
+        '2xs': '240px'
+      },
     },
   },
   plugins: [],
