@@ -117,7 +117,6 @@ export const LandingPage2 = ({scrollToTarget}) => {
                         {Content.CompanyFeatures.map((item,index) => (
                             <button key={index} className="px-3 py-1 flex flex-row gap-5 items-center xs:border rounded-md border-green-3">
                                 <GiLindenLeaf className="size-10" />
-                                {item.icon}
                                 <div className="w-3/4 flex flex-col xs:items-start xs:text-start">
                                     <h3 className="xs:text-[12px] font-bold">{item.title}</h3>
                                     <p className="xs:text-[9px] font-normal text-justify">{item.desc}</p>

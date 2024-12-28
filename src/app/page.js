@@ -11,7 +11,12 @@ import LandingPage1 from "./sections/landing_page";
 
 export default function Home() {
 
-  const contentPerPageInitial = window.innerWidth <= 500 ? 1 : 2;
+  const getInitialContentPerPage = () => {
+    if (typeof window !== "undefined" && window.innerWidth <= 380) {
+      return 1;
+    }
+    return 2;
+  };
 
   const portofolios = Content.Portofolio
   const [currentPage, setCurrentPage] = useState(1);
