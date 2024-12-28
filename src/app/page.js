@@ -20,7 +20,7 @@ export default function Home() {
 
   const portofolios = Content.Portofolio
   const [currentPage, setCurrentPage] = useState(1);
-  const [contentPerPage, setContentPerPage] = useState(contentPerPageInitial);
+  const [contentPerPage, setContentPerPage] = useState(getInitialContentPerPage);
   const portoliosLength = portofolios.length
   const totalPortosPages = portoliosLength / contentPerPage
 
