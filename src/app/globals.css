@@ -35,6 +35,16 @@ body {
   --white2: #E0E0E0;
 }
 
+:root {
+  --content-per-page: 2; /* Default for larger screens */
+}
+
+@media (max-width: 500px) {
+  :root {
+    --content-per-page: 1; /* Adjust for small screens */
+  }
+}
+
 @layer utilities {
 
   .text-green-1 {color: #CADB49;}

@@ -11,16 +11,12 @@ import LandingPage1 from "./sections/landing_page";
 
 export default function Home() {
 
-  const getInitialContentPerPage = () => {
-    if (typeof window !== "undefined" && window.innerWidth <= 500) {
-      return 1;
-    }
-    return 2;
-  };
-
   const portofolios = Content.Portofolio
   const [currentPage, setCurrentPage] = useState(1);
-  const [contentPerPage, setContentPerPage] = useState(getInitialContentPerPage);
+  const contentPerPage = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue('--content-per-page'),
+    10
+  ) || 2;
   const portoliosLength = portofolios.length
   const totalPortosPages = portoliosLength / contentPerPage
 
