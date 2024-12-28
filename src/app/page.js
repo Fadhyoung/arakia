@@ -13,10 +13,7 @@ export default function Home() {
 
   const portofolios = Content.Portofolio
   const [currentPage, setCurrentPage] = useState(1);
-  const contentPerPage = parseInt(
-    getComputedStyle(document.documentElement).getPropertyValue('--content-per-page'),
-    10
-  ) || 2;
+  const [contentPerPage, setContentPerPage] = useState(2);
   const portoliosLength = portofolios.length
   const totalPortosPages = portoliosLength / contentPerPage
 
@@ -182,7 +179,7 @@ export default function Home() {
               <button className="p-2 rounded-full bg-green-1"><HiChevronRight size={25} onClick={() => handlePorto(currentPage + 1)} /></button>
             </div>
             {/** card section */}
-            <div className='w-full flex flex-row gap-12'>
+            <div className='w-full flex lg:flex-row xs:flex-col gap-12'>
               {currentPortofolios.map((item,index) => (
                 <div key={index} className='lg:basis-[50%] xs:basis-0-[100%] flex-shrink-0 xs:w-full lg:p-10 xs:p-5 relative lg:rounded-[46px] xs:rounded-[28px] box-shadow-4 bg-white'>
                   <div className='lg:p-20 xs:p-12 text-white rounded-[23px] bg-green-3 text-center'>Pict</div>
