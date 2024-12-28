@@ -12,7 +12,7 @@ import LandingPage1 from "./sections/landing_page";
 export default function Home() {
 
   const getInitialContentPerPage = () => {
-    if (typeof window !== "undefined" && window.innerWidth <= 380) {
+    if (typeof window !== "undefined" && window.innerWidth <= 500) {
       return 1;
     }
     return 2;
