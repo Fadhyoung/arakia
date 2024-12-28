@@ -2,23 +2,26 @@
     "CompanyProfile" : {
         "desc1" : "CV Amanah Citra Cendekia (ARAKIA) adalah perusahaan yang bergerak di berbagai lini usaha strategis, yaitu konsultansi, telekomunikasi, agribisnis, jasa konstruksi, dan perdagangan bebas. Dengan filosofi intelektualitas, etika, dan kesederhanaan, ARAKIA mengusung pendekatan inovatif untuk menciptakan nilai tambah bagi masyarakat dan pembangunan daerah."
     },
-    "Mission": [
+    "CompanyFeatures": [
         {
-            "title": "Konsultansi, Telekomunikasi, Keilmuan, dan Riset",
-            "desc": "Memberikan layanan konsultansi dan riset berbasis data yang berkualitas untuk mendukung pengambilan keputusan yang strategis."
+            "title": "Perizinan Lingkungan",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
-            "title": "Pertanian dan Peternakan",
-            "desc": "Mengoptimalkan potensi agribisnis lokal dengan pendekatan teknologi modern untuk meningkatkan produktivitas dan kesejahteraan petani serta peternak. Menyediakan produk-produk unggulan yang berorientasi pada kualitas dan keberlanjutan."
+            "title": "Persetujuan Bangunan Gedung",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
-            "title": "Jasa Konstruksi",
-            "desc": "Menghadirkan solusi konstruksi yang inovatif dan berfokus pada efisiensi, estetika, serta ramah lingkungan."
+            "title": "Konsultasi Jasa Kajian Transportasi",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
-            "title": "Perdagangan Bebas",
-            "desc": "Mengelola perdagangan barang dan jasa yang kompetitif dengan menjaga kualitas dan integritas dalam setiap transaksi."
+            "title": "Web Development dan Aplikasi",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+        }, {
+            "title": "Arsitek & Jasa Perancangan Bangunan",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }
     ]
     ,
-    "CompanyFeatures": [
+    "Mission": [
         {
             "title": "Keilmuan, dan Riset",
             "desc": "Fokus pada layanan konsultasi Kajian Lingkungan, Analisis Dampak Lalu Lintas, Kajian Bangunan Gedung , riset keilmuan, serta solusi telekomunikasi."
@@ -31,6 +34,32 @@
         }, {
             "title": "Perdagangan Bebas",
             "desc": "Memfasilitasi distribusi barang dan jasa secara lokal maupun internasional."
+        }
+    ],
+    "Portofolio": [
+        {
+            "title": "Portofolio1",
+            "link": "none",
+            "poster": "",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+        },
+        {
+            "title": "Portofolio2",
+            "link": "none",
+            "poster": "",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+        },
+        {
+            "title": "Portofolio3",
+            "link": "none",
+            "poster": "",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+        },
+        {
+            "title": "Portofolio4",
+            "link": "none",
+            "poster": "",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }
     ]
 }
