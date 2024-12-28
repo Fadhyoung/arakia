@@ -1,5 +1,6 @@
-import Button1 from "../components/buttons";
+import { useRef } from "react";
 
+import Button1 from "../components/buttons";
 import Content from "../Content.json";
 
 import { FaCheck } from "react-icons/fa6";
@@ -7,7 +8,7 @@ import { FaRegCircle } from "react-icons/fa";
 import Image from "next/image";
 import { Navbar1 } from "../components/navbars";
 
-export const LandingPage1 = () => {
+export const LandingPage1 = ({scrollToTarget}) => {
     return (
         <>
 
@@ -51,7 +52,7 @@ export const LandingPage1 = () => {
                             <div className="w-full flex justify-between items-center gap-1 text-[12px] font-medium"><div className="flex gap-3 items-center"><FaRegCircle size={15} className="text-green-3" /> Pengembangan Aplikasi</div> <button className="p-1 text-green-3 rounded-md bg-green-1">Details</button></div>
                             <div className="w-full flex justify-between items-center gap-1 text-[12px] font-medium"><div className="flex gap-3 items-center"><FaRegCircle size={15} className="text-green-3" /> Desain Arsitektur</div> <button className="p-1 text-green-3 rounded-md bg-green-1">Details</button></div>
                         </div>
-                        <button className="w-full p-2 lg:hidden xs:block rounded-xl text-white bg-green-3">Scroll Down</button>
+                        <button className="w-full p-2 lg:hidden xs:block rounded-xl text-white bg-green-3" onClick={scrollToTarget}>Scroll Down</button>
                     </div>
                 </div>
 

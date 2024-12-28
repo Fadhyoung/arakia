@@ -24,8 +24,16 @@ export default function Home() {
     }
   };
 
+  const targetRef = useRef(null);
+
+  const scrollToTarget = () => {
+      if (targetRef.current) {
+          targetRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
+
   const data = Content.CompanyFeatures;
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handleLeftClick = () => {
     setActiveIndex((prev) => (prev + 1) % data.length); // Cycle to the next card
@@ -40,17 +48,17 @@ export default function Home() {
   
       <div className='w-full max-w-[2024px] lg:m-auto xs:m-0 grid grid-cols-1 lg:gap-20 xs:gap-0 place-content-center place-items-center'>
 
-        <LandingPage1 />
+        <LandingPage1 scrollToTarget={scrollToTarget} />
 
         {/** CONTINUESNESS LINE */}
-        <div className='lg:w-5/6 xs:w-full lg:p-20 xs:p-5 lg:-mb-40 xs:-mb-10 relative border border-b-0 rounded-[61px] xs:border-none border-green-3'>
+        <div ref={targetRef} className='lg:w-5/6 xs:w-full lg:p-20 xs:p-5 lg:-mb-40 xs:-mb-10 relative lg:border lg:border-b-0 rounded-[61px] xs:border-collapse border-green-3'>
 
           {/** GET TO KNOW SECTION */}
           <div className='relative flex flex-col lg:gap-10 xs:gap-2 justify-center items-center'>
             {/** TITTLE SECTION */}
-            <div className='lg:w-1/2 xs:w-full flex flex-col gap-2 justify-start items-start text-start'>
+            <div className='lg:w-1/2 xs:w-full flex flex-col gap-2 justify-center lg:text-center xs:text-start'>
               <h6 className='lg:block xs:hidden lg:text-[14px] xs:text-[10px] font-bold text-green-3'>Kami membidik dunia dengan martabat dan ketekunan. Tidak ada hal yang dapat mematahkan semangat kami dalam hal mengembangkan keinginan klien kami.</h6>
-              <h2 className='lg:text-[32px] xs:text-[40px] font-bold text-start'>Kenali Misi Kami</h2>            
+              <h2 className='lg:text-[32px] xs:text-[40px] font-bold lg:text-center xs:text-start'>Kenali Misi Kami</h2>            
             </div>
             {/** VISION MISSION DIV SENTION */}
             <div className='lg:w-3/4 xs:w-full lg:p-10 xs:p-5 flex flex-col gap-5 rounded-[17px] bg-radial-gray'>
@@ -79,7 +87,7 @@ export default function Home() {
               <p className='lg:text-[16px] xs:text-[14px] font-normal text-justify'>Mewujudkan tujuan yang besar memerlukan serangkaian strategi dan disiplin yang kuat. Arakia berkomitmen menjaga nilai-nilai berikut untuk mencapai tujuan itu.</p>
             </div>
             {/** right section */}
-            <div className='w-full h-80 relative flex lg:justify-center xs:justify-start items-center'>
+            <div className='w-full h-80 relative flex justify-center items-center'>
             {Content.CompanyFeatures.map((item, index) =>  {
 
                 const offset = index - activeIndex;
@@ -129,7 +137,7 @@ export default function Home() {
               <HiChevronLeft className='w-1/12 lg:block xs:hidden size-10 cursor-pointer hover:scale-125 duration-300' onClick={() => scroll("left")}/>
               <div className='lg:w-10/12 xs:w-full py-5 client-scroll-wrapper flex-shrink-0 lg:gap-10 xs:gap-3 overflow-scroll ' ref={scrollWrapperRef}>              
                 {[...Array(6)].map((_, index) => (
-                  <div className="lg:basis-[22%] xs:basis-[30%] lg:py-5 xs:py-3 px-0 flex justify-center items-center flex-shrink-0 border rounded-[20px] border-green-3 box-shadow-3 " key={index}>
+                  <div className="lg:basis-[22%] xs:basis-[38%] lg:py-5 xs:py-3 px-0 flex justify-center items-center flex-shrink-0 border lg:rounded-[20px] xs:rounded-[10px] border-green-3 box-shadow-3 " key={index}>
                     <Image
                       className="rounded-[39px] lg:w-16 lg:h-16 xs:w-10 xs:h-10"
                       src={"/arakia/images/notion.png"} width={64} height={64}
@@ -179,9 +187,9 @@ export default function Home() {
           </div>
 
           {/** ORNAMENT 2 */}
-          <div className='absolute -z-50 top-1/2 -right-72'>
-            <div className='p-44 border-[20px] border-white rounded-full bg-green-1'>
-              <div className='p-20 rounded-full border-[20px] border-white bg-green-1'></div>
+          <div className='absolute -z-50 top-1/2 lg:-right-72 xs:-right-32'>
+            <div className='lg:p-44 xs:p-16 border-[20px] border-white rounded-full bg-green-1'>
+              <div className='lg:p-20 xs:p-8 rounded-full border-[20px] border-white bg-green-1'></div>
             </div>            
           </div>
   
@@ -194,7 +202,7 @@ export default function Home() {
           </div>
 
           {/** ORNAMENT 3 */}
-          <div className='p-40 absolute -z-10 -bottom-64 -left-16 rounded-full bg-green-1'></div>
+          <div className='lg:p-40 xs:p-14 absolute -z-10 lg:-bottom-64 xs:-bottom-16 lg:-left-16 xs:-left-4 rounded-full bg-green-1'></div>
 
         </div>
 
