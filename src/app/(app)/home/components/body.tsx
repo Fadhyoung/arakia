@@ -3,9 +3,7 @@ import Typography from "@/components/Typography";
 import Image from "next/image";
 import Content from "@/app/Content.json";
 import { useRef, useState } from "react";
-import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { useRouter } from "next/navigation";
 import { socialIcons } from "constants/icons";
 
 interface bodyProps {
@@ -13,11 +11,10 @@ interface bodyProps {
 }
 
 export const Body = ({ t }: bodyProps) => {
-  const route = useRouter();
 
   const portofolios = Content.Portofolio;
   const [currentPage, setCurrentPage] = useState(1);
-  const [contentPerPage, setContentPerPage] = useState(2);
+  const contentPerPage = 2;
 
   const portoliosLength = portofolios.length;
   const totalPortosPages = portoliosLength / contentPerPage;
@@ -30,7 +27,6 @@ export const Body = ({ t }: bodyProps) => {
   );
 
   const scrollWrapperRef = useRef<HTMLDivElement>(null);
-  const targetRef = useRef<HTMLDivElement>(null);
 
   const handlePorto = (page: number) => {
     if (page <= 1) {

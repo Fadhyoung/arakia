@@ -42,7 +42,6 @@ const displayClasses: Record<
 
 const Typography: React.FC<TypographyProps> = ({
   variant,
-  type = "body",
   className = "",
   children,
   color = "primary",

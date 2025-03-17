@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Typography from "./Typography";
-import { FaWhatsapp, FaGoogle, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { socialIcons } from "constants/icons";
 import Content from "@/app/Content.json";
 

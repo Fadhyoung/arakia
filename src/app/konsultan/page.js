@@ -1,12 +1,10 @@
 "use client"
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight  } from "react-icons/hi";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import Content from "../Content.json";
 import LandingPage2 from "@/components/landing_page";
 
 export default function Home() {
@@ -30,17 +28,6 @@ export default function Home() {
       if (targetRef.current) {
           targetRef.current.scrollIntoView({ behavior: 'smooth' });
       }
-  };
-
-  const data = Content.CompanyFeatures;
-  const [activeIndex, setActiveIndex] = useState(1);
-
-  const handleLeftClick = () => {
-    setActiveIndex((prev) => (prev + 1) % data.length); // Cycle to the next card
-  };
-
-  const handleRightClick = () => {
-    setActiveIndex((prev) => (prev - 1 + data.length) % data.length); // Cycle to the previous card
   };
 
   return (

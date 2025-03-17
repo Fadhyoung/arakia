@@ -1,15 +1,12 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import Image from "next/image";
 
-import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import Content from "@/app/Content.json";
 import LandingPage1 from "./components/entranceScreen";
 import Typography from "@/components/Typography";
 import { useTranslations } from "next-intl";
-import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import { Body } from "./components/body";
 

@@ -27,8 +27,6 @@ const displayClasses: Record<
 const Stack = React.forwardRef<HTMLDivElement, StackProps>(
   (
     {
-      rowSpacing,
-      columnSpacing,
       direction = "row",
       wrap = "nowrap",
       justify = "start",
