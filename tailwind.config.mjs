@@ -10,7 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
+        black: "#141414",
+        green: "#00502E",
+        primaryGreen: "#00502E",
+        secondaryGreen: "#DEE8CF",
+        tertiaryGreen: "#E8F1ED"      },
       screens: {
         'xs': '320px', // Custom breakpoint for iPhone 13
         '2xs': '240px'

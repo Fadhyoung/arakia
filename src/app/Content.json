@@ -2,6 +2,9 @@
     "CompanyProfile" : {
         "desc1" : "CV Amanah Citra Cendekia (ARAKIA) adalah perusahaan yang bergerak di berbagai lini usaha strategis, yaitu konsultansi, telekomunikasi, agribisnis, jasa konstruksi, dan perdagangan bebas. Dengan filosofi intelektualitas, etika, dan kesederhanaan, ARAKIA mengusung pendekatan inovatif untuk menciptakan nilai tambah bagi masyarakat dan pembangunan daerah."
     },
+    "CompanyValue": [
+        "Kerja Cepat", "Amanah", "Berkelanjutan"
+    ],
     "CompanyFeatures": [
         {
             "title": "Perizinan Lingkungan",
@@ -38,28 +41,34 @@
     ],
     "Portofolio": [
         {
-            "title": "Portofolio1",
+            "title": "Andalalin",
             "link": "none",
-            "poster": "",
-            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+            "poster": "img_portofolio_1.png",
+            "desc": "Analisis dampak lalu lintas pengembangan RUmah Sakit Maguan Husada di Jl. Pracimantoro - Giribelah KM.6"
         },
         {
-            "title": "Portofolio2",
+            "title": "Design Interior",
             "link": "none",
-            "poster": "",
-            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+            "poster": "img_portofolio_2.png",
+            "desc": "Desain interior rumah dengan tampiland tiga dimensi perumahan A untuk 300 unit tipe B."
+        }
+    ],
+    "SocialMedia": [
+        {
+            "socialMedia": "Whatsapp",
+            "link": "https://www.whatsapp.com/"
         },
         {
-            "title": "Portofolio3",
-            "link": "none",
-            "poster": "",
-            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+            "socialMedia": "Google",
+            "link": "https://www.google.com/"
         },
         {
-            "title": "Portofolio4",
-            "link": "none",
-            "poster": "",
-            "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
+            "socialMedia": "LinkedIn",
+            "link": "http://linkedin.com/"
+        },
+        {
+            "socialMedia": "Instagram",
+            "link": "https://instagram.com"
         }
     ]
 }

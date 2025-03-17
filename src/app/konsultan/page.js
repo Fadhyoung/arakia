@@ -7,7 +7,7 @@ import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight  } from "react-icons/hi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import Content from "../Content.json";
-import {LandingPage2} from "../sections/landing_page";
+import LandingPage2 from "@/components/landing_page";
 
 export default function Home() {
 
