@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Content from "@/app/Content.json"
+import Content from "@/app/Content.json";
 import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/Button";
@@ -55,11 +55,13 @@ export const LandingPage2 = ({ t, scrollToTarget }: LandingPageProps) => {
                 />
               </div>
 
-              <BackgroundOverlay visibleOn="mobile-only"/>
-              <img
+              <BackgroundOverlay visibleOn="mobile-only" />
+              <Image
                 className="w-full h-full lg:hidden xs:block object-cover absolute left-0 top-0 -z-20"
                 src={"/arakia/images/bg-field.jpg"}
                 alt="landing page background"
+                width={800}
+                height={800}
               />
             </div>
 
@@ -82,12 +84,16 @@ export const LandingPage2 = ({ t, scrollToTarget }: LandingPageProps) => {
                 ))}
               </div>
 
-              <button
-                className="w-full p-2 lg:hidden xs:block rounded-xl text-white bg-green-3"
-                onClick={scrollToTarget}
-              >
-                Scroll Down
-              </button>
+              <Button
+                onClick={() => scrollToTarget()}
+                variant="secondary"
+                radius="md"
+                buttonType="subtle"
+                label={t("scrollDown")}
+                size="md"
+                visibleOn="mobile-only"
+                className="w-full text-green font-semibold"
+              />
             </div>
           </div>
 
@@ -115,7 +121,7 @@ export const LandingPage2 = ({ t, scrollToTarget }: LandingPageProps) => {
         </div>
 
         {/** BACKGROUND IMAGE */}
-        <BackgroundOverlay visibleOn="desktop-only"/>
+        <BackgroundOverlay visibleOn="desktop-only" />
         <Image
           className="lg:block xs:hidden object-cover absolute -z-30 "
           src={"/arakia/images/bg-field.jpg"}
