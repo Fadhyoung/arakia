@@ -10,6 +10,7 @@ import Typography from "@/components/Typography";
 import Button from "@/components/Button";
 import Stack from "@/components/Stack";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
+import { CONSULTANT } from "constants/routes";
 
 interface LandingPageProps {
   t: (key: string) => string;
@@ -24,10 +25,11 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
       {/** TOP COVER */}
       <div className="xs:mt-0 lg:w-full xs:w-full lg:h-auto xs:h-screen relative flex justify-start items-start overflow-hidden">
         {/** CONTENT CONTAINER */}
-        <div className="w-full h-full lg:py-20 xs:py-0 lg:px-0 xs:px-0 flex flex-col gap-8 justify-between top-0 items-center">
+        <div className="w-full h-full lg:py-20 xs:py-0 px-0 flex flex-col gap-8 justify-between top-0 items-center">
           {/** DESC CONTENT */}
           <div className="lg:w-2/4 lg:mt-20 xs:mt-0 xs:w-full h-full flex flex-col gap-2 justify-center items-center">
-            {/** TOP SECTION */}
+            
+            {/** TOP SECTION {MOBILE} */}
             <div className="lg:px-0 xs:px-5 lg:py-0 py-20 relative flex flex-col gap-4 xs:justify-between items-center overflow-hidden">
               <Typography
                 variant="4xl"
@@ -43,7 +45,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                 gap={5}
                 justify="center"
                 className="w-full"
-                display="mobile-only"
+                visibleOn="mobile-only"
               >
                 <Button
                   data-testid="vendor_list_add_button"
@@ -82,7 +84,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
 
             {/** BOTTOM SECTION {WEB MODE} */}
             <div className="w-full h-full px-6 py-2 flex flex-col lg:gap-10 xs:gap-8 justify-start items-center lg:bg-transparent xs:bg-white">
-              <Typography variant="3xl" display="mobile-only">
+              <Typography variant="3xl" visibleOn="mobile-only">
                 {t("ourApproach")}
               </Typography>
               <div className="lg:w-auto xs:w-full px-8 py-2 flex lg:flex-row xs:flex-col lg:gap-3 xs:gap-1 lg:items-end xs:items-start rounded-lg lg:border-none xs:border border-green-3 bg-white">
@@ -104,13 +106,11 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                     key={index}
                     className="w-full flex justify-between items-center gap-1 text-[12px] font-medium"
                   >
-                    <div className="flex gap-3 items-center">
-                      <Typography variant="md" color="primary">
-                        {item.title}
-                      </Typography>
-                    </div>{" "}
+                    <Typography variant="md" color="primary">
+                      {item.title}
+                    </Typography>
                     <Button
-                      onClick={() => router.push("/konsultan")}
+                      onClick={() => router.push(CONSULTANT)}
                       variant="tertiary"
                       radius="md"
                       buttonType="subtle"
@@ -129,7 +129,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                 buttonType="subtle"
                 label={t("scrollDown")}
                 size="md"
-                display="mobile-only"
+                visibleOn="mobile-only"
                 className="w-full text-green font-semibold"
               />
             </div>
@@ -138,28 +138,28 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
           {/** FLYING BUTTON */}
           <div className="mt-10 lg:flex xs:hidden gap-10">
             <Button
-              onClick={() => router.push("/konsultan")}
+              onClick={() => router.push(CONSULTANT)}
               variant="primary"
-              radius="full"
+              radius="xl"
               buttonType="solid"
               label={t("konsultant")}
-              size="lg"
+              size="xl"
               className="text-xl text-green font-semibold"
             />
             <Button
-              onClick={() => router.push("/konsultan")}
+              onClick={() => router.push(CONSULTANT)}
               variant="tertiary"
-              radius="full"
+              radius="xl"
               buttonType="solid"
               label={t("contact")}
-              size="lg"
+              size="xl"
               className="text-xl text-black font-semibold"
             />
           </div>
         </div>
 
         {/** BACKGROUND IMAGE */}
-        <div className="w-full h-full absolute lg:block xs:hidden -z-10 bg-cover"></div>
+        <BackgroundOverlay visibleOn="desktop-only" />
         <Image
           className="lg:block xs:hidden object-cover absolute -z-30 "
           src={"/images/bg-field.jpg"}

@@ -166,13 +166,6 @@ export const Body = ({ t }: bodyProps) => {
               </div>
             ))}
           </div>
-          {/** PAGINATION SECTION */}
-          <div className="w-full mt-5 flex gap-5 items-center justify-center">
-            <div className="p-2 rounded-full bg-green-3"></div>
-            <div className="p-1 rounded-full bg-green-3"></div>
-            <div className="p-1 rounded-full bg-green-3"></div>
-            <div className="p-1 rounded-full bg-green-3"></div>
-          </div>
         </div>
 
         {/** ORNAMENT 2 */}

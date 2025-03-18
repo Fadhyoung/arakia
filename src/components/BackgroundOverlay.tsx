@@ -14,7 +14,7 @@ const BackgroundOverlay: React.FC<BackgroundOverlayProps> = ({
   zIndex = -10,
   className,
 }) => {
-  const visibilityClasses = {
+  const visibleOnClasses = {
     "mobile-only": "lg:hidden block",
     "desktop-only": "hidden lg:block",
     all: "block",
@@ -23,8 +23,8 @@ const BackgroundOverlay: React.FC<BackgroundOverlayProps> = ({
   return (
     <div
       className={clsx(
-        "w-full h-full absolute left-0 top-0 bg-cover",
-        visibilityClasses[visibleOn],
+        "w-full h-full absolute left-0 top-0 bg-overlay",
+        visibleOnClasses[visibleOn],
         className
       )}
       style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined, zIndex }}

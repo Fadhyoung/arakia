@@ -8,18 +8,23 @@
     "CompanyFeatures": [
         {
             "title": "Perizinan Lingkungan",
+            "icon": "License",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Persetujuan Bangunan Gedung",
+            "icon": "Approval",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Konsultasi Jasa Kajian Transportasi",
+            "icon": "Consultation",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Web Development dan Aplikasi",
+            "icon": "Development",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Arsitek & Jasa Perancangan Bangunan",
+            "icon": "Architect",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }
     ]

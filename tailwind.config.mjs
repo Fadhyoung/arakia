@@ -10,6 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        overlay: "rgb(0, 0, 0, 0.45);",
         black: "#141414",
         green: "#00502E",
         primaryGreen: "#00502E",

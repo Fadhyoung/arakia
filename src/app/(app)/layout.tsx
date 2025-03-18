@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import Button from "@/components/Button";
+import Typography from "@/components/Typography";
+import * as React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function LayoutPage({
   children,
@@ -8,10 +11,19 @@ export default function LayoutPage({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className='bg-white'>
-        {children}
-      </body>
-    </html>
-  )
-};
+    <>
+      {children}
+      <Button
+        radius="md"
+        size="lg"
+        buttonType="elevated"
+        className="gap-5 fixed right-10 bottom-10 text-green"
+        onClick={() => window.open("https://whatsapp.com", "_blank")}
+        visibleOn="desktop-only"
+      >
+        <Typography variant="xl">Contact Us</Typography>
+        <FaWhatsapp size={30} />
+      </Button>
+    </>
+  );
+}

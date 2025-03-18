@@ -8,7 +8,7 @@ import LandingPage1 from "./components/entranceScreen";
 import Typography from "@/components/Typography";
 import { useTranslations } from "next-intl";
 import Footer from "@/components/Footer";
-import { Body } from "./components/body";
+import { Body } from "@/components/body";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -145,7 +145,7 @@ export default function Home() {
         <Body t={t} />
 
         {/* FOOTER */}
-        <Footer t={t} />
+        <Footer />
 
       </div>
     </>

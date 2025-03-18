@@ -3,12 +3,12 @@ import React from "react";
 import Typography from "./Typography";
 import { socialIcons } from "constants/icons";
 import Content from "@/app/Content.json";
+import { useTranslations } from "next-intl";
 
-interface footerProps {
-  t: (key: string) => string;
-}
 
-export const Footer = ({ t }: footerProps) => {
+export const Footer = () => {
+  const t = useTranslations('footer')
+
   return (
     <>
       {/** FOOTER */}

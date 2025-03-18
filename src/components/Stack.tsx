@@ -6,17 +6,17 @@ export type Spacer = `spacer-${0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   rowSpacing?: Spacer;
   columnSpacing?: Spacer;
-  direction?: "row" | "column" | "row-reverse" | "column-reverse";
+  direction?: "row" | "col" | "row-reverse" | "col-reverse";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
   justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
   align?: "start" | "center" | "end" | "stretch" | "baseline";
   gap?: number;
   className?: string;
-  display?: "mobile-only" | "desktop-only" | "all";
+  visibleOn?: "mobile-only" | "desktop-only" | "all";
 }
 
-const displayClasses: Record<
-  NonNullable<StackProps["display"]>,
+const visibleOnClasses: Record<
+  NonNullable<StackProps["visibleOn"]>,
   string
 > = {
   "mobile-only": "lg:hidden block",
@@ -34,7 +34,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
       gap,
       className,
       children,
-      display = "all",
+      visibleOn = "all",
       ...props
     },
     ref
@@ -52,7 +52,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
     return (
     <div
       ref={ref}
-      className={clsx(flexClasses, displayClasses[display])}
+      className={clsx(flexClasses, visibleOnClasses[visibleOn])}
       {...props}
     >
       {children}

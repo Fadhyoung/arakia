@@ -9,7 +9,7 @@ export type TypographyProps = {
   color?: "primary" | "secondary" | "tertiary";
   weight?: string;
   styles?: CSSProperties;
-  display?: "mobile-only" | "desktop-only" | "all";
+  visibleOn?: "mobile-only" | "desktop-only" | "all";
   id?: string;
 };
 
@@ -31,8 +31,8 @@ const colorClasses: Record<NonNullable<TypographyProps["color"]>, string> = {
   tertiary: "text-[#00502E]",
 };
 
-const displayClasses: Record<
-  NonNullable<TypographyProps["display"]>,
+const visibleOnClasses: Record<
+  NonNullable<TypographyProps["visibleOn"]>,
   string
 > = {
   "mobile-only": "lg:hidden block",
@@ -48,7 +48,7 @@ const Typography: React.FC<TypographyProps> = ({
   weight,
   styles,
   id,
-  display = "all",
+  visibleOn = "all",
 }) => {
   return (
     <p
@@ -56,7 +56,7 @@ const Typography: React.FC<TypographyProps> = ({
       className={clsx(
         variantClasses[variant],
         colorClasses[color],
-        displayClasses[display],
+        visibleOnClasses[visibleOn],
         className
       )}
       style={{ color, fontWeight: weight, ...styles }}

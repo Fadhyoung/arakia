@@ -3,24 +3,26 @@ import clsx from "clsx";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  label?: string;
+  children?: React.ReactNode;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
   icon?: React.ReactNode;
-  buttonType?: "solid" | "outline" | "subtle" | "ghost" | "link" | "icon";
-  size?: "xs" | "sm" | "md" | "lg";
+  buttonType?: "solid" | "outline" | "subtle" | "ghost" | "link" | "icon" | "elevated";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   variant?: "primary" | "secondary" | "tertiary" | "danger" | "default";
   radius?: "none" | "xs" | "sm" | "md" | "xl" | "full";
   isLoading?: boolean;
   loadingPosition?: "left" | "right";
   labelLoading?: string;
-  display?: "mobile-only" | "desktop-only" | "all";
+  visibleOn?: "mobile-only" | "desktop-only" | "all";
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       label,
+      children,
       startIcon,
       endIcon,
       icon,
@@ -33,7 +35,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       labelLoading = "Loading...",
       className,
       disabled,
-      display = "all",
+      visibleOn = "all",
       ...props
     },
     ref
@@ -51,12 +53,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const buttonTypeStyles = {
-      solid: variantStyles[variant],
+      solid: `${variantStyles[variant]} text-black`,
       outline: "border border-current bg-transparent",
       subtle: `${variantStyles[variant]} bg-opacity-50`,
       ghost: "bg-transparent",
       link: "bg-transparent underline p-0",
       icon: "p-2 rounded-full",
+      elevated: `${variantStyles[variant]} shadow-md hover:shadow-lg`,
     };
 
     const sizeStyles = {
@@ -64,6 +67,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       sm: "px-3 py-1.5 text-sm",
       md: "px-4 py-2 text-base",
       lg: "px-5 py-3 text-lg",
+      xl: "px-8 py-5 text-xl",
     };
 
     const radiusStyles = {
@@ -75,12 +79,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       full: "rounded-full",
     };
 
-    const displayClasses = {
-        "mobile-only": "lg:hidden block",
-        "desktop-only": "hidden lg:block",
-        all: "block",
-      };
-    
+    const visibleOnClasses = {
+      "mobile-only": "lg:hidden flex",
+      "desktop-only": "hidden lg:flex",
+      all: "block",
+    };
 
     return (
       <button
@@ -90,7 +93,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           buttonTypeStyles[buttonType],
           sizeStyles[size],
           radiusStyles[radius],
-          displayClasses[display],
+          visibleOnClasses[visibleOn],
           disabled && "opacity-50 cursor-not-allowed",
           className
         )}
@@ -101,7 +104,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <span className="mr-2 animate-spin">🔄</span>
         )}
         {startIcon && !icon && <span className="mr-2">{startIcon}</span>}
-        {icon ? icon : isLoading ? labelLoading : label}
+        {icon ? icon : isLoading ? labelLoading : children ?? label}
         {endIcon && !icon && <span className="ml-2">{endIcon}</span>}
         {isLoading && loadingPosition === "right" && (
           <span className="ml-2 animate-spin">🔄</span>
