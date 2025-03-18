@@ -75,7 +75,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
               <BackgroundOverlay visibleOn="mobile-only" />
               <Image
                 className="w-full h-full lg:hidden xs:block object-cover absolute left-0 top-0 -z-20"
-                src={"/images/bg-field.jpg"}
+                src={"/arakia/images/bg-field.jpg"}
                 alt="landing page background"
                 width={800}
                 height={800}
@@ -162,7 +162,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
         <BackgroundOverlay visibleOn="desktop-only" />
         <Image
           className="lg:block xs:hidden object-cover absolute -z-30 "
-          src={"/images/bg-field.jpg"}
+          src={"/arakia/images/bg-field.jpg"}
           layout="fill"
           alt="landing page background"
         />

@@ -18,7 +18,7 @@ export const Footer = () => {
           <div>
             <Image
               className=" object-cover rounded-[39px]"
-              src={"/images/LOGO_w_1.png"}
+              src={"/arakia/images/LOGO_w_1.png"}
               width={350}
               height={100}
               layout="intrinsic"

@@ -44,7 +44,7 @@ export const Navbar1 = () => {
         <div className="w-1/3 flex justify-start items-center gap-5">
           <Image
             className="object-cover rounded-[39px]"
-            src={"/images/LOGO-COMPACT.png"}
+            src={"/arakia/images/LOGO-COMPACT.png"}
             width={24}
             height={24}
             alt="logo"

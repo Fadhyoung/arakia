@@ -88,7 +88,7 @@ export const Body = ({ t }: bodyProps) => {
                 >
                   <Image
                     className="rounded-[39px] lg:w-16 lg:h-16 xs:w-10 xs:h-10"
-                    src={"/images/notion.png"}
+                    src={"/arakia/images/notion.png"}
                     width={64}
                     height={64}
                     alt="Notion logo"
@@ -149,7 +149,7 @@ export const Body = ({ t }: bodyProps) => {
               >
                 <div className="lg:p-20 xs:p-12 text-white rounded-[23px] text-center overflow-scroll relative">
                   <Image
-                    src={`/images/${item.poster}`}
+                    src={`/arakia/images/${item.poster}`}
                     alt="image"
                     fill={true}
                   />
