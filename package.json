@@ -10,10 +10,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "arakia-company-profile": "file:",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
     "next": "15.1.2",
     "next-intl": "^4.0.2",
     "react": "^19.0.0",

@@ -6,6 +6,12 @@ import { useRef, useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { socialIcons } from "constants/icons";
 
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 interface bodyProps {
   t: (key: string) => string;
 }
@@ -54,6 +60,26 @@ export const Body = ({ t }: bodyProps) => {
       }
     }
   };
+
+  const boxRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      boxRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: boxRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true
+        }
+      }
+    );
+  }, []);
+
   return (
     <>
       {/** CONTINUESNESS LINE AND BACKGROUND */}
@@ -65,7 +91,7 @@ export const Body = ({ t }: bodyProps) => {
         {/** CLIENTS SECTIOON */}
         <div className="p-2 flex flex-col justify-center items-center">
           <div className="lg:w-11/12 xs:w-full lg:px-20 xs:px-0 flex flex-col gap-2 lg:text-center xs:text-justify">
-            <Typography variant="3xl" weight="700" color="primary">
+            <Typography ref={boxRef} variant="3xl" weight="700" color="primary">
               {t("prologClient")}
             </Typography>
             <Typography variant="lg" color="tertiary">
