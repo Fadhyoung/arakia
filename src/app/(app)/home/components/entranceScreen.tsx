@@ -30,9 +30,9 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
           <div className="lg:w-2/4 lg:mt-20 xs:mt-0 xs:w-full h-full flex flex-col gap-2 justify-center items-center">
             
             {/** TOP SECTION {MOBILE} */}
-            <div className="lg:px-0 xs:px-5 lg:py-0 py-20 relative flex flex-col gap-4 xs:justify-between items-center overflow-hidden">
+            <div className="px-5 lg:py-0 py-20 pb-14 relative flex flex-col gap-4 xs:justify-between items-center overflow-hidden">
               <Typography
-                variant="4xl"
+                variant="xl"
                 color="secondary"
                 className="w-3/4 text-center"
               >
@@ -56,7 +56,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                   radius="full"
                   label={t("konsultant")}
                   className="text-green font-semibold"
-                  size="md"
+                  size="sm"
                 >
                   {t("konsultant")}
                 </Button>
@@ -66,7 +66,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                   radius="full"
                   buttonType="solid"
                   label={t("contact")}
-                  size="md"
+                  size="sm"
                   className="text-green font-semibold"
                 />
               </Stack>
@@ -83,28 +83,33 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
             </div>
 
             {/** BOTTOM SECTION {WEB MODE} */}
-            <div className="w-full h-full px-6 py-2 flex flex-col lg:gap-10 xs:gap-8 justify-start items-center lg:bg-transparent xs:bg-white">
+            <div className="w-full h-full px-6 py-2 flex flex-col lg:gap-10 xs:gap-3 justify-start items-center lg:bg-transparent xs:bg-white">
               <Typography variant="3xl" visibleOn="mobile-only">
                 {t("ourApproach")}
               </Typography>
-              <div className="lg:w-auto xs:w-full px-8 py-2 flex lg:flex-row xs:flex-col lg:gap-3 xs:gap-1 lg:items-end xs:items-start rounded-lg lg:border-none xs:border border-green-3 bg-white">
+              <div className="lg:w-auto xs:w-full lg:px-8 xs:px-2 py-2 flex flex-col lg:gap-3 xs:gap-1 items-center rounded-lg lg:border-none xs:border border-green-3 bg-white">
                 <Typography variant="lg" color="primary">
                   {t("withArakia")}
                 </Typography>
+                <Stack className="w-full" justify="center" gap={2}>
                 {Content.CompanyValue.map((item, index) => (
-                  <div className="flex gap-2" key={index}>
+                  <Stack
+                    key={index}                    
+                    gap={3}
+                  >
                     <FaCheck size={20} className="text-green-3" />
-                    <Typography variant="md" color="primary">
+                    <Typography variant="md" color="primary" className="text-nowrap">
                       {item}
                     </Typography>
-                  </div>
+                  </Stack>
                 ))}
+                </Stack>
               </div>
-              <div className="lg:w-3/4 xs:w-full px-8 py-5 flex flex-col lg:gap-3 xs:gap-2 items-end rounded-lg border border-green-3 bg-white">
+              <div className="lg:w-3/4 xs:w-full px-8 py-5 flex flex-col gap-3 items-end rounded-lg border border-green-3 bg-white">
                 {Content.CompanyFeatures.map((item, index) => (
                   <div
                     key={index}
-                    className="w-full flex justify-between items-center gap-1 text-[12px] font-medium"
+                    className="w-full flex justify-between items-center gap-1"
                   >
                     <Typography variant="md" color="primary">
                       {item.title}
@@ -126,7 +131,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                 onClick={() => scrollToTarget()}
                 variant="secondary"
                 radius="md"
-                buttonType="subtle"
+                buttonType="solid"
                 label={t("scrollDown")}
                 size="md"
                 visibleOn="mobile-only"

@@ -39,6 +39,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
     },
     ref
   ) => {
+
     const flexClasses = clsx(
       "flex",
       direction && `flex-${direction}`,
@@ -46,6 +47,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
       justify && `justify-${justify}`,
       align && `items-${align}`,
       gap !== undefined && `gap-${gap}`,
+      "w-full",
       className
     );
 

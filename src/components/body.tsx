@@ -74,11 +74,11 @@ export const Body = ({ t }: bodyProps) => {
           </div>
           <div className="w-full lg:mt-5 xs:mt-2 flex justify-center items-center">
             <HiChevronLeft
-              className="w-1/12 lg:block xs:hidden size-10 cursor-pointer hover:scale-125 duration-300"
+              className="w-1/12 lg:block xs:hidden size-10 text-green cursor-pointer hover:scale-125 duration-300"
               onClick={() => scroll("left")}
             />
             <div
-              className="lg:w-10/12 xs:w-full py-5 client-scroll-wrapper flex-shrink-0 lg:gap-10 xs:gap-3 overflow-scroll "
+              className="lg:w-10/12 xs:w-full py-5 client-scroll-wrapper flex-shrink-0 lg:gap-11 xs:gap-3 overflow-scroll "
               ref={scrollWrapperRef}
             >
               {[...Array(6)].map((_, index) => (
@@ -97,7 +97,7 @@ export const Body = ({ t }: bodyProps) => {
               ))}
             </div>
             <HiChevronRight
-              className="w-1/12 lg:block xs:hidden size-10 cursor-pointer hover:scale-125 duration-300"
+              className="w-1/12 lg:block xs:hidden size-10 text-green cursor-pointer hover:scale-125 duration-300"
               onClick={() => scroll("right")}
             />
           </div>
@@ -147,11 +147,13 @@ export const Body = ({ t }: bodyProps) => {
                 key={index}
                 className="lg:basis-[40%] xs:basis-0-[100%] flex-shrink-0 xs:w-full lg:p-10 xs:p-5 relative flex flex-col gap-3 lg:rounded-[46px] xs:rounded-[28px] box-shadow-4 bg-white"
               >
-                <div className="lg:p-20 xs:p-12 text-white rounded-[23px] text-center overflow-scroll relative">
+                <div className="lg:p-20 xs:p-12 text-white rounded-[23px] text-center overflow-hidden relative">
                   <Image
-                    src={`/arakia/images/${item.poster}`}
-                    alt="image"
-                    fill={true}
+                  src={`/arakia/images/${item.poster}`}
+                  alt="image"
+                  fill={true}
+                  style={{ objectFit: "cover" }}
+                  className="rounded-[23px]"
                   />
                 </div>
                 <Typography variant="3xl" weight="700" color="primary">
@@ -186,7 +188,7 @@ export const Body = ({ t }: bodyProps) => {
               className="px-3 py-1 w-full flex justify-between items-center gap-1 text-[18px] font-medium border rounded-md border-green-3"
             >
               <div className="flex gap-3 items-center">
-                {socialIcons[item.socialMedia]}
+                {socialIcons(30)[item.socialMedia]}
                 {item.socialMedia}
               </div>{" "}
               <Button

@@ -21,8 +21,8 @@ const variantClasses: Record<TypographyProps["variant"], string> = {
   lg: "lg:text-[20px] xs:text-[16px]",
   xl: "lg:text-[24px] xs:text-[20px]",
   "2xl": "lg:text-[30px] xs:text-[24px]",
-  "3xl": "lg:text-[34px] xs:text-[24px]",
-  "4xl": "lg:text-[40px] xs:text-[24px]",
+  "3xl": "lg:text-[34px] xs:text-[28px]",
+  "4xl": "lg:text-[40px] xs:text-[30px]",
 };
 
 const colorClasses: Record<NonNullable<TypographyProps["color"]>, string> = {
