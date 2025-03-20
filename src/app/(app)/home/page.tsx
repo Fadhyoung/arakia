@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import Footer from "@/components/Footer";
 import { Body } from "@/components/body";
 import Button from "@/components/Button";
+import useGsapFadeIn from "@/utils/gsapFadeIn";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -33,6 +34,11 @@ export default function Home() {
     setActiveIndex((prev) => (prev - 1 + data.length) % data.length); // Cycle to the previous card
   };
 
+  const fadeInRefs = useGsapFadeIn(); 
+  const setRef = (index: number) => (el: HTMLDivElement | null) => {
+    fadeInRefs.current[index] = el;
+  };
+
   return (
     <>
       <div className="w-full max-w-[2024px] lg:m-auto xs:m-0 grid grid-cols-1 lg:gap-20 xs:gap-0 place-content-center place-items-center">
@@ -46,7 +52,7 @@ export default function Home() {
           {/** GET TO KNOW SECTION */}
           <div className="relative flex flex-col lg:gap-10 xs:gap-2 justify-center items-center">
             {/** TITTLE SECTION */}
-            <div className="lg:w-3/4 xs:w-full flex flex-col gap-2 justify-center text-center">
+            <div ref={setRef(0)} className="lg:w-3/4 xs:w-full flex flex-col gap-2 justify-center text-center">
               <Typography variant="lg" color="tertiary">
                 {t("prologVisi")}
               </Typography>
@@ -55,7 +61,7 @@ export default function Home() {
               </Typography>
             </div>
             {/** VISION MISSION DIV SENTION */}
-            <div className="lg:w-3/4 xs:w-full lg:p-10 xs:p-5 flex flex-col gap-5 rounded-[17px] bg-radial-gray">
+            <div ref={setRef(1)} className="lg:w-3/4 xs:w-full lg:p-10 xs:p-5 flex flex-col gap-5 rounded-[17px] bg-radial-gray">
               <div className="flex lg:flex-row xs:flex-col lg:gap-14 xs:gap-5 font-bold text-justify leading-loose">
                 <Typography variant="md" color="primary">
                   {t("visiDesc")}
@@ -77,7 +83,7 @@ export default function Home() {
           {/** FEATURES SECTION */}
           <div className="lg:w-4/6 xs:w-10/12 lg:grid lg:grid-cols-2 xs:flex xs:flex-col lg:gap-36 xs:gap-14">
             {/** left section */}
-            <div className="w-full flex flex-col lg:gap-10 xs:gap-2 justify-evenly lg:text-left xs:text-center">
+            <div ref={setRef(2)} className="w-full flex flex-col lg:gap-10 xs:gap-2 justify-evenly lg:text-left xs:text-center">
               <div>
                 <Typography variant="lg" color="secondary">
                   {t("misi")}
@@ -92,7 +98,7 @@ export default function Home() {
             </div>
 
             {/** right section */}
-            <div className="w-full h-80 relative flex justify-center items-center">
+            <div ref={setRef(3)} className="w-full h-80 relative flex justify-center items-center">
               {Content.Mission.map((item, index) => {
                 const offset = index - activeIndex;
                 const scale = 1 - Math.min(Math.abs(offset) * 0.1, 0.5);

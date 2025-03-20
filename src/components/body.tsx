@@ -6,9 +6,9 @@ import { useRef, useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { socialIcons } from "constants/icons";
 
-import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import useGsapFadeIn from "@/utils/gsapFadeIn";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,24 +61,10 @@ export const Body = ({ t }: bodyProps) => {
     }
   };
 
-  const boxRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      boxRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: boxRef.current,
-          start: "top 80%",
-          end: "top 30%",
-          scrub: true
-        }
-      }
-    );
-  }, []);
+  const fadeInRefs = useGsapFadeIn(); 
+  const setRef = (index: number) => (el: HTMLDivElement | null) => {
+    fadeInRefs.current[index] = el;
+  };
 
   return (
     <>
@@ -89,9 +75,9 @@ export const Body = ({ t }: bodyProps) => {
         <div className="lg:p-20 xs:p-12 absolute -z-20 lg:top-40 xs:top-5 lg:-left-20 xs:-left-16 rounded-full bg-green-1"></div>
 
         {/** CLIENTS SECTIOON */}
-        <div className="p-2 flex flex-col justify-center items-center">
+        <div ref={setRef(0)} className="p-2 flex flex-col justify-center items-center">
           <div className="lg:w-11/12 xs:w-full lg:px-20 xs:px-0 flex flex-col gap-2 lg:text-center xs:text-justify">
-            <Typography ref={boxRef} variant="3xl" weight="700" color="primary">
+            <Typography variant="3xl" weight="700" color="primary">
               {t("prologClient")}
             </Typography>
             <Typography variant="lg" color="tertiary">
@@ -132,7 +118,7 @@ export const Body = ({ t }: bodyProps) => {
         {/** PORTOFOLIO */}
         <div className="lg:w-11/12 xs:w-full relative flex flex-col lg:gap-5 xs:gap-0">
           {/** Top title */}
-          <div className="flex justify-center items-center">
+          <div ref={setRef(1)} className="flex justify-center items-center">
             <Button
               variant="tertiary"
               radius="full"
@@ -167,7 +153,7 @@ export const Body = ({ t }: bodyProps) => {
             />
           </div>
           {/** card section */}
-          <div className="w-full flex lg:flex-row xs:flex-col gap-12 justify-center">
+          <div ref={setRef(2)} className="w-full flex lg:flex-row xs:flex-col gap-12 justify-center">
             {currentPortofolios.map((item, index) => (
               <div
                 key={index}
@@ -204,7 +190,7 @@ export const Body = ({ t }: bodyProps) => {
         </div>
 
         {/** CONTACT SECTION */}
-        <div className="lg:w-1/3 xs:w-full py-5 px-5 flex flex-col gap-4 justify-center items-center text-green-3 rounded-[14px] box-shadow-4 bg-white">
+        <div ref={setRef(3)} className="lg:w-1/3 xs:w-full py-5 px-5 flex flex-col gap-4 justify-center items-center text-green-3 rounded-[14px] box-shadow-4 bg-white">
           <h1 className="w-3/4 text-[24px] font-black text-center text-black">
             {t("contactUs")}
           </h1>
