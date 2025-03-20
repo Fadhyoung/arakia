@@ -49,7 +49,7 @@ export const Navbar1 = () => {
             height={24}
             alt="logo"
           />
-          <Stack direction="col"gap={1}>
+          <Stack direction="row" gap={1}>
             <Typography variant="md" weight="700" color={isScrolled ? "primary": "secondary"}>
               {t("amanahCitra")}
             </Typography>

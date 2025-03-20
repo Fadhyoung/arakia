@@ -5,12 +5,12 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { BsBuildingAdd } from "react-icons/bs";
 import { ReactNode } from "react";
 
-export const socialIcons: Record<string, ReactNode> = {
-  Whatsapp: <FaWhatsapp size={30} />,
-  Google: <FaGoogle size={30} />,
-  LinkedIn: <FaLinkedin size={30} />,
-  Instagram: <FaInstagram size={30} />,
-};
+export const socialIcons = (size: number): Record<string, ReactNode> => ({
+  Whatsapp: <FaWhatsapp size={size} />,
+  Google: <FaGoogle size={size} />,
+  LinkedIn: <FaLinkedin size={size} />,
+  Instagram: <FaInstagram size={size} />,
+});
 
 export const featuresIcons: Record<string, ReactNode> = {
   License: <TbLicense size={30} />,

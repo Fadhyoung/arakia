@@ -1,4 +1,4 @@
-import { default as React, CSSProperties } from "react";
+import { default as React, CSSProperties, forwardRef } from "react";
 import clsx from "clsx";
 
 export type TypographyProps = {
@@ -21,8 +21,8 @@ const variantClasses: Record<TypographyProps["variant"], string> = {
   lg: "lg:text-[20px] xs:text-[16px]",
   xl: "lg:text-[24px] xs:text-[20px]",
   "2xl": "lg:text-[30px] xs:text-[24px]",
-  "3xl": "lg:text-[34px] xs:text-[24px]",
-  "4xl": "lg:text-[40px] xs:text-[24px]",
+  "3xl": "lg:text-[34px] xs:text-[28px]",
+  "4xl": "lg:text-[40px] xs:text-[30px]",
 };
 
 const colorClasses: Record<NonNullable<TypographyProps["color"]>, string> = {
@@ -40,30 +40,38 @@ const visibleOnClasses: Record<
   all: "block",
 };
 
-const Typography: React.FC<TypographyProps> = ({
-  variant,
-  className = "",
-  children,
-  color = "primary",
-  weight,
-  styles,
-  id,
-  visibleOn = "all",
-}) => {
-  return (
-    <p
-      id={id}
-      className={clsx(
-        variantClasses[variant],
-        colorClasses[color],
-        visibleOnClasses[visibleOn],
-        className
-      )}
-      style={{ color, fontWeight: weight, ...styles }}
-    >
-      {children}
-    </p>
-  );
-};
+const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
+  (
+    {
+      variant,
+      className = "",
+      children,
+      color = "primary",
+      weight,
+      styles,
+      id,
+      visibleOn = "all",
+    },
+    ref
+  ) => {
+    return (
+      <p
+        id={id}
+        ref={ref}
+        className={clsx(
+          variantClasses[variant],
+          colorClasses[color],
+          visibleOnClasses[visibleOn],
+          className
+        )}
+        style={{ color, fontWeight: weight, ...styles }}
+      >
+        {children}
+      </p>
+    );
+  }
+);
+
+Typography.displayName = "Typography";
 
 export default Typography;
