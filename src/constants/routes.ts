@@ -1,3 +1,3 @@
 export const HOME = "/"
 export const CONSULTANT = "/konsultan"
-export const PERIZINNA_LINGKUNGAN = "/konsultan/perizinan-lingkungan"
+export const LIST_PROJECT = "/konsultan/list-project"

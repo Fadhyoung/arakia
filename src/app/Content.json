@@ -18,28 +18,28 @@
             "icon": "Approval",
             "poster": "img_portofolio_1.png",
             "contact": "",
-            "url": "/konsultan/perizinan-lingkungan",
+            "url": "/konsultan/list-project",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Konsultasi Jasa Kajian Transportasi",
             "icon": "Consultation",
             "poster": "img_portofolio_1.png",
             "contact": "",
-            "url": "/konsultan/perizinan-lingkungan",
+            "url": "/konsultan/list-project",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Web Development dan Aplikasi",
             "icon": "Development",
             "poster": "img_portofolio_1.png",
             "contact": "",
-            "url": "/konsultan/perizinan-lingkungan",
+            "url": "/konsultan/list-project",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Arsitek & Jasa Perancangan Bangunan",
             "icon": "Architect",
             "poster": "img_portofolio_1.png",
             "contact": "",
-            "url": "/konsultan/perizinan-lingkungan",
+            "url": "/konsultan/list-project",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }
     ]
