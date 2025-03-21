@@ -34,11 +34,7 @@ jobs:
       # Step 5: Build the Next.js app
       - name: Build the app
         run: npm run build
-
-      # Step 6: Export the static site
-      - name: Export static files
-        run: npm run export
-
+        
       # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
