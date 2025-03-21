@@ -10,28 +10,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Step 2: Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 22 # Use Node.js version 16 or later
-        cache: 'npm'     # Cache dependencies for faster builds
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22 # Use Node.js version 16 or later
+          cache: "npm" # Cache dependencies for faster builds
 
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: npm install
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    # Step 4: Build the Next.js app
-    - name: Build the app
-      run: npm run build
+      # Step 4: Set environment variables
+      - name: Set environment variables
+        run: |
+          echo "NEXT_PUBLIC_SHEET_ID=${{ secrets.SHEET_ID }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
 
-    # Step 5: Deploy to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
+      # Step 5: Build the Next.js app
+      - name: Build the app
+        run: npm run build
+
+      # Step 6: Export the static site
+      - name: Export static files
+        run: npm run export
+
+      # Step 7: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
           github_token: ${{ secrets.ARAKIA_SECRET }}
           publish_dir: ./out
