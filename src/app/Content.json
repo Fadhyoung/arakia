@@ -10,31 +10,36 @@
             "title": "Perizinan Lingkungan",
             "icon": "License",
             "poster": "img_portofolio_1.png",
-            "contact": "",            
+            "contact": "",
+            "url": "/konsultan/perizinan-lingkungan",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Persetujuan Bangunan Gedung",
             "icon": "Approval",
             "poster": "img_portofolio_1.png",
             "contact": "",
+            "url": "/konsultan/perizinan-lingkungan",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Konsultasi Jasa Kajian Transportasi",
             "icon": "Consultation",
             "poster": "img_portofolio_1.png",
             "contact": "",
+            "url": "/konsultan/perizinan-lingkungan",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Web Development dan Aplikasi",
             "icon": "Development",
             "poster": "img_portofolio_1.png",
             "contact": "",
+            "url": "/konsultan/perizinan-lingkungan",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }, {
             "title": "Arsitek & Jasa Perancangan Bangunan",
             "icon": "Architect",
             "poster": "img_portofolio_1.png",
             "contact": "",
+            "url": "/konsultan/perizinan-lingkungan",
             "desc": "Lorem ipsum dolor sit amet consectetur. Molestie sit eget lacus ut. Sed faucibus at elit in vulputate vitae id malesuada."
         }
     ]
@@ -56,16 +61,20 @@
     ],
     "Portofolio": [
         {
+            "id": 1,
             "title": "Andalalin",
             "link": "none",
             "poster": "img_portofolio_1.png",
-            "desc": "Analisis dampak lalu lintas pengembangan RUmah Sakit Maguan Husada di Jl. Pracimantoro - Giribelah KM.6"
+            "desc": "Analisis dampak lalu lintas pengembangan RUmah Sakit Maguan Husada di Jl. Pracimantoro - Giribelah KM.6",
+            "service": "Konsultasi Jasa Kajian Transportasi"
         },
         {
+            "id": 2,
             "title": "Design Interior",
             "link": "none",
             "poster": "img_portofolio_2.png",
-            "desc": "Desain interior rumah dengan tampiland tiga dimensi perumahan A untuk 300 unit tipe B."
+            "desc": "Desain interior rumah dengan tampiland tiga dimensi perumahan A untuk 300 unit tipe B.",
+            "service": "Arsitek & Jasa Perancangan Bangunan"
         }
     ],
     "SocialMedia": [

@@ -11,16 +11,23 @@ import Typography from "@/components/Typography";
 import Stack from "@/components/Stack";
 import Button from "@/components/Button";
 import LeftBorderTitle from "@/components/LeftBorderTitle";
+import { useRouter } from "next/navigation";
+import useGsapFadeIn from "@/utils/gsapFadeIn";
 
-export default function Home() {
+export default function KonsultanPage() {
   const t = useTranslations("konsultant");
-
+  const router = useRouter();
   const targetRef = useRef<HTMLDivElement>(null);
 
   const scrollToTarget = () => {
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const fadeInRefs = useGsapFadeIn();
+  const setRef = (index: number) => (el: HTMLDivElement | null) => {
+    fadeInRefs.current[index] = el;
   };
 
   return (
@@ -32,15 +39,11 @@ export default function Home() {
         <div className="w-full flex flex-wrap gap-12 justify-center">
           {Content.CompanyFeatures.map((item, index) => (
             <div
+              ref={setRef(index)}
               key={index}
               className="lg:basis-[40%] xs:basis-0-[100%] flex-shrink-0 xs:w-full lg:p-10 xs:p-5 relative flex flex-col gap-3 lg:rounded-[46px] xs:rounded-[28px] box-shadow-4 bg-white"
             >
-              <Stack direction="row" gap={2}>
-                <LeftBorderTitle />
-                <Typography variant="3xl" weight="700" color="tertiary">
-                  {item.title}
-                </Typography>
-              </Stack>
+              <LeftBorderTitle label={item.title} />
               <Stack className="flex gap-5">
                 <div className="w-4/6 lg:p-20 xs:p-12 h-full overflow-hidden relative">
                   <Image
@@ -61,6 +64,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     label={t("projectList")}
+                    onClick={() => router.push(item.url)}
                     variant="secondary"
                     radius="md"
                     className="w-full"
