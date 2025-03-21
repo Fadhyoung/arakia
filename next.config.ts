@@ -16,6 +16,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  env: {
+    NEXT_PUBLIC_SHEET_ID: process.env.NEXT_PUBLIC_SHEET_ID,
+    NEXT_PUBLIC_API_KEY: process.env.NEXT_PUBLIC_API_KEY,
+  },
 };
 
 export default withNextIntl(nextConfig);
