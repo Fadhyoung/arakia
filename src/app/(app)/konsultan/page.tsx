@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 
 import LandingPage2 from "@/app/(app)/konsultan/components/landing_page";
-import { useTranslations } from "next-intl";
 import Footer from "@/components/Footer";
 import Content from "@/app/Content.json";
 import Image from "next/image";
@@ -11,24 +10,11 @@ import Typography from "@/components/Typography";
 import Stack from "@/components/Stack";
 import Button from "@/components/Button";
 import LeftBorderTitle from "@/components/LeftBorderTitle";
-import { useRouter } from "next/navigation";
-import useGsapFadeIn from "@/utils/gsapFadeIn";
+import useKonsulatn from "./hooks";
 
 export default function KonsultanPage() {
-  const t = useTranslations("konsultant");
-  const router = useRouter();
-  const targetRef = useRef<HTMLDivElement>(null);
 
-  const scrollToTarget = () => {
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const fadeInRefs = useGsapFadeIn();
-  const setRef = (index: number) => (el: HTMLDivElement | null) => {
-    fadeInRefs.current[index] = el;
-  };
+  const {t, scrollToTarget, setRef, router} = useKonsulatn();
 
   return (
     <>
@@ -45,7 +31,7 @@ export default function KonsultanPage() {
             >
               <LeftBorderTitle label={item.title} />
               <Stack className="flex gap-5">
-                <div className="w-4/6 lg:p-20 xs:p-12 h-full overflow-hidden relative">
+                <div className="w-[70%] lg:p-20 xs:p-12 h-full overflow-hidden relative">
                   <Image
                     src={`/arakia/images/${item.poster}`}
                     alt="image"
@@ -53,13 +39,14 @@ export default function KonsultanPage() {
                     style={{ objectFit: "cover" }}
                     objectPosition="center"
                     className="rounded-[23px]"
+                    loading="lazy"
                   />
                 </div>
                 <Stack
                   direction="col"
                   gap={2}
                   justify="between"
-                  className="w-2/6 h-full"
+                  className="w-[30%] h-full"
                 >
                   <Button
                     size="lg"
