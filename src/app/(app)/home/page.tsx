@@ -28,7 +28,7 @@ export default function Home() {
             {/** TITTLE SECTION */}
             <div
               ref={setRef(0)}
-              className="lg:w-3/4 xs:w-full flex flex-col gap-2 justify-center text-center"
+              className="lg:w-3/4 xs:w-full flex flex-col gap-2 text-center items-center"
             >
               <Typography variant="lg" color="tertiary">
                 {t("prologVisi")}
@@ -37,7 +37,7 @@ export default function Home() {
                 {t("ourVisi")}
               </Typography>
             </div>
-            {/** VISION MISSION DIV SENTION */}
+            {/** VISION MISSION DIV SECTION */}
             <div
               ref={setRef(1)}
               className="lg:w-3/4 xs:w-full lg:p-10 xs:p-5 flex flex-col gap-5 rounded-[17px] bg-radial-gray"

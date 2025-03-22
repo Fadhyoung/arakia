@@ -21,6 +21,7 @@ export default function useKonsulatn() {
 
   return {
     t,
+    targetRef,
     setRef,
     scrollToTarget,
     router,

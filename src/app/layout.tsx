@@ -1,8 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar1 } from "../components/Navbars";
-import {NextIntlClientProvider} from 'next-intl';
+import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
+import { BaseProvider } from "providers/BaseProvider";
+import TreeModal from "@/components/TreeModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +14,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-})
+});
 
-export default async function RootLayout({children,}: {children: React.ReactNode;}) {
-
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const locale = await getLocale();
 
   return (
@@ -24,8 +29,11 @@ export default async function RootLayout({children,}: {children: React.ReactNode
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased bg-white`}
       >
         <NextIntlClientProvider>
-          <Navbar1 />
-          {children}
+          <BaseProvider>
+            <Navbar1 />
+            {children}
+            <TreeModal />
+          </BaseProvider>
         </NextIntlClientProvider>
       </body>
     </html>

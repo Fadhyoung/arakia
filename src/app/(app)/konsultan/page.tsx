@@ -11,10 +11,10 @@ import Stack from "@/components/Stack";
 import Button from "@/components/Button";
 import LeftBorderTitle from "@/components/LeftBorderTitle";
 import useKonsulatn from "./hooks";
+import Card from "@/components/Card";
 
 export default function KonsultanPage() {
-
-  const {t, scrollToTarget, setRef, router} = useKonsulatn();
+  const { t, scrollToTarget, setRef, router, targetRef } = useKonsulatn();
 
   return (
     <>
@@ -22,60 +22,68 @@ export default function KonsultanPage() {
         <LandingPage2 t={t} scrollToTarget={scrollToTarget} />
 
         {/** card section */}
-        <div className="w-full flex flex-wrap gap-12 justify-center">
+        <div
+          ref={targetRef}
+          className="w-full py-10 px-5 flex flex-wrap gap-16 justify-center"
+        >
           {Content.CompanyFeatures.map((item, index) => (
-            <div
+            <Card
               ref={setRef(index)}
               key={index}
-              className="lg:basis-[40%] xs:basis-0-[100%] flex-shrink-0 xs:w-full lg:p-10 xs:p-5 relative flex flex-col gap-3 lg:rounded-[46px] xs:rounded-[28px] box-shadow-4 bg-white"
-            >
-              <LeftBorderTitle label={item.title} />
-              <Stack className="flex gap-5">
-                <div className="w-[70%] lg:p-20 xs:p-12 h-full overflow-hidden relative">
-                  <Image
-                    src={`/arakia/images/${item.poster}`}
-                    alt="image"
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                    objectPosition="center"
-                    className="rounded-[23px]"
-                    loading="lazy"
-                  />
-                </div>
-                <Stack
-                  direction="col"
-                  gap={2}
-                  justify="between"
-                  className="w-[30%] h-full"
-                >
-                  <Button
-                    size="lg"
-                    label={t("projectList")}
-                    onClick={() => router.push(item.url)}
-                    variant="secondary"
-                    radius="md"
-                    className="w-full"
-                  />
-                  <Button
-                    size="lg"
-                    label={t("termCondition")}
-                    disabled
-                    radius="md"
-                    className="w-full"
-                  />
-                  <Button
-                    size="lg"
-                    label={t("contact")}
-                    variant="secondary"
-                    radius="md"
-                    className="w-full"
-                  />
-                </Stack>
-              </Stack>
-              <Typography variant="lg" color="primary">
-                {item.desc}
-              </Typography>
-            </div>
+              radius="xl"
+              type="elevated"
+              className="lg:basis-[40%] xs:basis-0-[100%] xs:w-full lg:p-10 xs:p-5 relative flex flex-col gap-5 "
+              body={
+                <>
+                  <LeftBorderTitle label={item.title} />
+                  <Stack className="w-full flex gap-5">
+                    <div className="w-[70%] lg:p-20 xs:p-12 h-full overflow-hidden relative">
+                      <Image
+                        src={`/arakia/images/${item.poster}`}
+                        alt="image"
+                        fill={true}
+                        style={{ objectFit: "cover" }}
+                        objectPosition="center"
+                        className="rounded-[23px]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <Stack
+                      direction="col"
+                      gap={2}
+                      justify="between"
+                      className="w-[30%] h-full"
+                    >
+                      <Button
+                        size="lg"
+                        label={t("projectList")}
+                        onClick={() => router.push(item.url)}
+                        variant="secondary"
+                        radius="md"
+                        className="w-full"
+                      />
+                      <Button
+                        size="lg"
+                        label={t("termCondition")}
+                        disabled
+                        radius="md"
+                        className="w-full"
+                      />
+                      <Button
+                        size="lg"
+                        label={t("contact")}
+                        variant="secondary"
+                        radius="md"
+                        className="w-full"
+                      />
+                    </Stack>
+                  </Stack>
+                  <Typography variant="lg" color="primary">
+                    {item.desc}
+                  </Typography>
+                </>
+              }
+            />
           ))}
         </div>
 

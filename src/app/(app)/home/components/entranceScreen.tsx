@@ -23,18 +23,28 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
   return (
     <>
       {/** TOP COVER */}
-      <div className="xs:mt-0 lg:w-full xs:w-full lg:h-auto xs:h-screen relative flex justify-start items-start overflow-hidden">
+      <div className="mt-0 w-full md:h-[95vh] xs:h-screen max-h-[900px] relative overflow-hidden">
         {/** CONTENT CONTAINER */}
-        <div className="w-full h-full lg:py-20 xs:py-0 px-0 flex flex-col gap-8 justify-between top-0 items-center">
+        <div className="h-full md:py-20 xs:py-0 flex flex-col items-center">
           {/** DESC CONTENT */}
-          <div className="lg:w-2/4 lg:mt-20 xs:mt-0 xs:w-full h-full flex flex-col gap-2 justify-center items-center">
-            
+          <div className="md:w-2/4 md:mt-20 xs:mt-0 xs:w-full h-full flex flex-col gap-2 justify-center items-center">
+            <Typography variant="3xl" color="secondary" className="text-center" visibleOn="desktop-only">
+              {t("titleProlog")}
+            </Typography>
+
             {/** TOP SECTION {MOBILE} */}
-            <div className="px-5 lg:py-0 py-20 pb-14 relative flex flex-col gap-4 xs:justify-between items-center overflow-hidden">
+            <Stack
+              direction="col"
+              align="center"
+              gap={5}
+              className="px-10 pt-20 pb-5"
+              visibleOn="mobile-only"
+            >
               <Typography
                 variant="xl"
                 color="secondary"
                 className="w-3/4 text-center"
+                visibleOn="mobile-only"
               >
                 {t("titleProlog")}
               </Typography>
@@ -53,61 +63,48 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                   variant="primary"
                   style={{ maxWidth: "126px" }}
                   buttonType="solid"
-                  radius="full"
+                  radius="md"
                   label={t("konsultant")}
                   className="text-green font-semibold"
-                  size="sm"
+                  size="md"
+                  hidden
                 >
                   {t("konsultant")}
                 </Button>
                 <Button
                   onClick={() => scrollToTarget()}
-                  variant="secondary"
-                  radius="full"
+                  variant="tertiary"
+                  radius="md"
                   buttonType="solid"
                   label={t("contact")}
-                  size="sm"
+                  size="md"
                   className="text-green font-semibold"
                 />
               </Stack>
-
-              {/* FILTER */}
-              <BackgroundOverlay visibleOn="mobile-only" />
-              <Image
-                className="w-full h-full lg:hidden xs:block object-cover absolute left-0 top-0 -z-20"
-                src={"/arakia/images/bg-field.jpg"}
-                alt="landing page background"
-                width={800}
-                height={800}
-                quality={100}
-                loading="lazy"
-              />
-            </div>
+            </Stack>
 
             {/** BOTTOM SECTION {WEB MODE} */}
-            <div className="w-full h-full px-6 py-2 flex flex-col lg:gap-10 xs:gap-3 justify-start items-center lg:bg-transparent xs:bg-white">
-              <Typography variant="3xl" visibleOn="mobile-only">
-                {t("ourApproach")}
-              </Typography>
-              <div className="lg:w-auto xs:w-full lg:px-8 xs:px-2 py-2 flex flex-col lg:gap-3 xs:gap-1 items-center rounded-lg lg:border-none xs:border border-green-3 bg-white">
+            <div className="w-full md:h-full xs:h-screen px-6 py-4 flex flex-col lg:gap-10 xs:gap-3 justify-start items-center md:bg-transparent xs:bg-white">
+              <div className="md:w-auto xs:w-full md:px-8 xs:px-2 py-2 flex flex-col md:gap-3 xs:gap-1 items-center rounded-lg md:border-none xs:border border-green-3 bg-white">
                 <Typography variant="lg" color="primary">
                   {t("withArakia")}
                 </Typography>
                 <Stack className="w-full" justify="center" gap={2}>
-                {Content.CompanyValue.map((item, index) => (
-                  <Stack
-                    key={index}                    
-                    gap={3}
-                  >
-                    <FaCheck size={20} className="text-green-3" />
-                    <Typography variant="md" color="primary" className="text-nowrap">
-                      {item}
-                    </Typography>
-                  </Stack>
-                ))}
+                  {Content.CompanyValue.map((item, index) => (
+                    <Stack key={index} gap={3}>
+                      <FaCheck size={20} className="text-green-3" />
+                      <Typography
+                        variant="md"
+                        color="primary"
+                        className="text-nowrap"
+                      >
+                        {item}
+                      </Typography>
+                    </Stack>
+                  ))}
                 </Stack>
               </div>
-              <div className="lg:w-3/4 xs:w-full px-8 py-5 flex flex-col gap-3 items-end rounded-lg border border-green-3 bg-white">
+              <div className="md:w-auto xs:w-full px-8 py-5 flex flex-col gap-3 items-end rounded-lg border border-green-3 bg-white">
                 {Content.CompanyFeatures.map((item, index) => (
                   <div
                     key={index}
@@ -143,7 +140,12 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
           </div>
 
           {/** FLYING BUTTON */}
-          <div className="mt-10 lg:flex xs:hidden gap-10">
+          <Stack
+            gap={10}
+            justify="center"
+            className="mt-10"
+            visibleOn="desktop-only"
+          >
             <Button
               onClick={() => router.push(CONSULTANT)}
               variant="primary"
@@ -162,15 +164,15 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
               size="xl"
               className="text-xl text-black font-semibold"
             />
-          </div>
+          </Stack>
         </div>
 
         {/** BACKGROUND IMAGE */}
-        <BackgroundOverlay visibleOn="desktop-only" />
+        <BackgroundOverlay visibleOn="all" />
         <Image
-          className="lg:block xs:hidden object-cover absolute -z-30 "
+          className="block object-cover absolute -z-30 "
           src={"/arakia/images/bg-field.jpg"}
-          layout="fill"
+          fill
           loading="lazy"
           quality={100}
           alt="landing page background"

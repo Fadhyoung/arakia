@@ -19,9 +19,9 @@ const visibleOnClasses: Record<
   NonNullable<StackProps["visibleOn"]>,
   string
 > = {
-  "mobile-only": "lg:hidden block",
-  "desktop-only": "hidden lg:block",
-  all: "block",
+  "mobile-only": "md:hidden flex",
+  "desktop-only": "hidden md:flex",
+  all: "flex",
 };
 
 const Stack = React.forwardRef<HTMLDivElement, StackProps>(

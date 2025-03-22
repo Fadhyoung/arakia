@@ -26,7 +26,11 @@ export const Footer = () => {
             layout="intrinsic"
             alt=""
           />
-          <Stack direction="col" justify="end" align="end">
+          <Stack
+            direction="col"
+            justify={screenType === ScreenType.Desktop ? "end" : "center"}
+            align={screenType === ScreenType.Desktop ? "end" : "center"}
+          >
             <Typography variant="2xl" weight="800" color="tertiary">
               {t("ptName")}
             </Typography>
@@ -36,7 +40,11 @@ export const Footer = () => {
             <div className="w-full py-2 flex gap-5 lg:justify-end xs:justify-center items-center text-green-3">
               {Content.SocialMedia.map((item, index) => (
                 <div key={index} className="flex items-center gap-1">
-                  {socialIcons(screenType === ScreenType.Desktop ? 30 : 20)[item.socialMedia]}
+                  {
+                    socialIcons(screenType === ScreenType.Desktop ? 30 : 20)[
+                      item.socialMedia
+                    ]
+                  }
                   <Typography
                     variant="md"
                     color="tertiary"
