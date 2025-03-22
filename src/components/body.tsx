@@ -76,7 +76,7 @@ export const Body = ({ t }: bodyProps) => {
 
         {/** CLIENTS SECTIOON */}
         <div ref={setRef(0)} className="p-2 flex flex-col justify-center items-center">
-          <div className="lg:w-11/12 xs:w-full lg:px-20 xs:px-0 flex flex-col gap-2 lg:text-center xs:text-justify">
+          <div className="md:w-11/12 xs:w-full lg:px-20 xs:px-0 flex flex-col gap-2 items-center lg:text-center xs:text-justify">
             <Typography variant="3xl" weight="700" color="primary">
               {t("prologClient")}
             </Typography>
@@ -103,6 +103,7 @@ export const Body = ({ t }: bodyProps) => {
                     src={"/arakia/images/notion.png"}
                     width={64}
                     height={64}
+                    loading="lazy"
                     alt="Notion logo"
                   />
                 </div>
