@@ -62,6 +62,8 @@ export const LandingPage2 = ({ t, scrollToTarget }: LandingPageProps) => {
                 alt="landing page background"
                 width={800}
                 height={800}
+                quality={100}
+                loading="lazy"
               />
             </div>
 
@@ -126,6 +128,8 @@ export const LandingPage2 = ({ t, scrollToTarget }: LandingPageProps) => {
           className="lg:block xs:hidden object-cover absolute -z-30 "
           src={"/arakia/images/bg-field.jpg"}
           layout="fill"
+          quality={100}
+          loading="lazy"
           alt="landing page background"
         />
       </div>

@@ -35,6 +35,7 @@ export default function PerizinanLingkunganPage() {
                   style={{ objectFit: "cover" }}
                   objectPosition="center"
                   className="rounded-[23px]"
+                  loading="lazy"
                 />
               </div>
               <div className="lg:w-1/2 xs:w-full p-5 flex flex-col text-left gap-5">
