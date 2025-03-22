@@ -11,6 +11,7 @@ import Button from "@/components/Button";
 import Stack from "@/components/Stack";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
 import { CONSULTANT } from "constants/routes";
+import { WA_NUMBER } from "constants/otherWeb";
 
 interface LandingPageProps {
   t: (key: string) => string;
@@ -156,7 +157,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
               className="text-xl text-green font-semibold"
             />
             <Button
-              onClick={() => router.push(CONSULTANT)}
+              onClick={() => router.push(WA_NUMBER)}
               variant="tertiary"
               radius="xl"
               buttonType="solid"

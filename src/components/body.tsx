@@ -207,7 +207,7 @@ export const Body = ({ t }: bodyProps) => {
               <Button
                 variant="secondary"
                 radius="sm"
-                label={t("detail")}
+                label={t("open")}
                 onClick={() =>
                   window.open(item.link, "_blank", "noopener,noreferrer")
                 }
