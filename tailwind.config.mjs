@@ -17,7 +17,8 @@ export default {
         secondaryGreen: "#DEE8CF",
         tertiaryGreen: "#E8F1ED"      },
       screens: {
-        'xs': '320px', // Custom breakpoint for iPhone 13
+        'md': '800px',
+        'xs': '320px',
         '2xs': '240px'
       },
     },

@@ -51,6 +51,13 @@
     "termCondition": "Syarat & Ketentuan",
     "prologMisi1": "Kenali bagaimana kami mewujudkan misi kami",
     "prologMisi2": "Mewujudkan tujuan yang besar memerlukan serangkaian strategi dan disiplin yang kuat. Arakia berkomitmen menjaga nilai-nilai berikut untuk mencapai tujuan itu."
+  },
+  "treeModal": {
+    "linkTree": "Link Tree",
+    "home": "Home",
+    "consultant": "Konsultan",
+    "contact": "Kontak",
+    "projectList": "List Project"
   }
 }
   

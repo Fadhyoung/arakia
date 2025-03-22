@@ -4,13 +4,11 @@ import { useState, useEffect } from "react";
 import { ScreenType } from "types/screenTypes";
 
 export default function useScreenType() {
-  const [screenType, setScreenType] = useState<string>(
-    typeof window !== "undefined" && window.innerWidth < 768 ? ScreenType.Mobile : ScreenType.Desktop
-  );
+  const [screenType, setScreenType] = useState<string | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setScreenType(window.innerWidth < 768 ? ScreenType.Mobile : ScreenType.Desktop);
+      setScreenType(window.innerWidth < 900 ? ScreenType.Mobile : ScreenType.Desktop);
     };
 
     window.addEventListener("resize", handleResize);

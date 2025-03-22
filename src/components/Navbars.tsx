@@ -8,11 +8,13 @@ import { useRouter } from "next/navigation";
 import { HOME } from "constants/routes";
 import Typography from "./Typography";
 import Stack from "./Stack";
+import { useBaseProvider } from "providers/BaseProvider";
 
 export const Navbar1 = () => {
   const t = useTranslations("navbar");
   const route = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
+  const { openModalMessage } = useBaseProvider();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,9 +69,7 @@ export const Navbar1 = () => {
             label={t("tree")}
             size="md"
             className="font-extrabold text-primaryGreen"
-            onClick={() =>
-              window.open("https://linktr.ee/", "_blank", "noopener,noreferrer")
-            }
+            onClick={() => openModalMessage("yolo", true, null)}
           />
         </div>
       </nav>
