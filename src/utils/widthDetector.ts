@@ -4,17 +4,33 @@ import { useState, useEffect } from "react";
 import { ScreenType } from "types/screenTypes";
 
 export default function useScreenType() {
-  const [screenType, setScreenType] = useState<string | null>(null);
+  const [screenType, setScreenType] = useState<{ width: string; height: string }>({
+    width: "",
+    height: "",
+  });
 
   useEffect(() => {
-    const handleResize = () => {
-      setScreenType(window.innerWidth < 900 ? ScreenType.Mobile : ScreenType.Desktop);
+    const widthQuery = window.matchMedia("(max-width: 900px)");
+    const heightQuery = window.matchMedia("(max-height: 840px)");
+
+    const handleChange = () => {
+      setScreenType({
+        width: widthQuery.matches ? ScreenType.Mobile : ScreenType.Desktop,
+        height: heightQuery.matches ? "Short" : "Tall",
+      });
     };
 
-    window.addEventListener("resize", handleResize);
-    handleResize();
+    // Initial check
+    handleChange();
 
-    return () => window.removeEventListener("resize", handleResize);
+    // Add listeners
+    widthQuery.addEventListener("change", handleChange);
+    heightQuery.addEventListener("change", handleChange);
+
+    return () => {
+      widthQuery.removeEventListener("change", handleChange);
+      heightQuery.removeEventListener("change", handleChange);
+    };
   }, []);
 
   return screenType;

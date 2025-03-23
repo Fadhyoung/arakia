@@ -28,8 +28,8 @@ export const Footer = () => {
           />
           <Stack
             direction="col"
-            justify={screenType === ScreenType.Desktop ? "end" : "center"}
-            align={screenType === ScreenType.Desktop ? "end" : "center"}
+            justify={screenType.width === ScreenType.Desktop ? "end" : "center"}
+            align={screenType.width === ScreenType.Desktop ? "end" : "center"}
           >
             <Typography variant="2xl" weight="800" color="tertiary">
               {t("ptName")}
@@ -41,7 +41,7 @@ export const Footer = () => {
               {Content.SocialMedia.map((item, index) => (
                 <div key={index} className="flex items-center gap-1">
                   {
-                    socialIcons(screenType === ScreenType.Desktop ? 30 : 20)[
+                    socialIcons(screenType.width === ScreenType.Desktop ? 30 : 20)[
                       item.socialMedia
                     ]
                   }

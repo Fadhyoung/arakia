@@ -12,6 +12,8 @@ import Stack from "@/components/Stack";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
 import { CONSULTANT } from "constants/routes";
 import { WA_NUMBER } from "constants/otherWeb";
+import useScreenType from "@/utils/widthDetector";
+import { ScreenType } from "types/screenTypes";
 
 interface LandingPageProps {
   t: (key: string) => string;
@@ -20,16 +22,21 @@ interface LandingPageProps {
 
 export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
   const router = useRouter();
+  const screenType = useScreenType();
 
   return (
     <>
       {/** TOP COVER */}
-      <div className="mt-0 w-full md:h-[95vh] xs:h-screen max-h-[900px] relative overflow-hidden">
+      <div
+      className={`w-full max-h-[900px] relative overflow-hidden ${
+        screenType.height === "Short" && screenType.width === ScreenType.Desktop  ? "h-auto" : "md:h-[95vh]"
+      }`}
+    >
         {/** CONTENT CONTAINER */}
         <div className="h-full md:py-20 xs:py-0 flex flex-col items-center">
           {/** DESC CONTENT */}
-          <div className="md:w-2/4 md:mt-20 xs:mt-0 xs:w-full h-full flex flex-col gap-2 justify-center items-center">
-            <Typography variant="3xl" color="secondary" className="text-center" visibleOn="desktop-only">
+          <div className="md:w-2/4 md:mt-20 xs:mt-0 xs:w-full h-full flex flex-col justify-center items-center">
+            <Typography variant="4xl" weight="1000" color="secondary" className="text-center" visibleOn="desktop-only">
               {t("titleProlog")}
             </Typography>
 
@@ -38,7 +45,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
               direction="col"
               align="center"
               gap={5}
-              className="px-10 pt-20 pb-5"
+              className="px-10 pt-20 pb-10"
               visibleOn="mobile-only"
             >
               <Typography
@@ -85,7 +92,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
             </Stack>
 
             {/** BOTTOM SECTION {WEB MODE} */}
-            <div className="w-full md:h-full xs:h-screen px-6 py-4 flex flex-col lg:gap-10 xs:gap-3 justify-start items-center md:bg-transparent xs:bg-white">
+            <div className="w-full md:h-full xs:h-full px-6 py-6 flex flex-col gap-5 items-center md:bg-transparent xs:bg-white">
               <div className="md:w-auto xs:w-full md:px-8 xs:px-2 py-2 flex flex-col md:gap-3 xs:gap-1 items-center rounded-lg md:border-none xs:border border-green-3 bg-white">
                 <Typography variant="lg" color="primary">
                   {t("withArakia")}
