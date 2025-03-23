@@ -11,7 +11,6 @@ A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 - 🌟 Next.js 14 with App Router
 - 📜 TypeScript for type safety
 - 🎨 Tailwind CSS for styling
-- 🔥 API routes and authentication with NextAuth
 - ⚡ Optimized performance with ISR & SSR
 
 ---
@@ -21,20 +20,20 @@ A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/Fadhyoung/arakia.git
+cd arakia
 ```
 
 Install dependencies:
 
 ```sh
-pnpm install  # or npm install / yarn install
+yarn install
 ```
 
 Run the development server:
 
 ```sh
-pnpm dev  # or npm run dev / yarn dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -105,8 +104,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 Create a `.env.local` file and add:
 
 ```sh
-NEXT_PUBLIC_API_URL=https://api.example.com
-NEXTAUTH_SECRET=your-secret-key
+NEXT_PUBLIC_SHEET_ID=
+NEXT_PUBLIC_API_KEY=
 ```
 
 ---
@@ -131,16 +130,9 @@ NEXTAUTH_SECRET=your-secret-key
 
 ---
 
-## 📜 License
+## 📬 Contact Me
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📬 Contact
-
-👤 **Your Name**  
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
-- GitHub: [yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+👤 **Fanuhi**  
+- GitHub: [yourusername](https://github.com/Fadhyoung)
+- Email: fadhlinurhimawan@gmail.com
 
