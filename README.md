@@ -112,11 +112,10 @@ NEXT_PUBLIC_API_KEY=
 
 ## ⚡ Scripts
 
-- `pnpm dev` – Start development server
-- `pnpm build` – Build the project
-- `pnpm start` – Run production build
-- `pnpm lint` – Run ESLint
-- `pnpm test` – Run tests
+- `yarn dev` – Start development server
+- `yarn build` – Build the project
+- `yarn start` – Run production build
+- `yarn lint` – Run ESLint
 
 ---
 
@@ -133,6 +132,6 @@ NEXT_PUBLIC_API_KEY=
 ## 📬 Contact Me
 
 👤 **Fanuhi**  
-- GitHub: [yourusername](https://github.com/Fadhyoung)
+- GitHub: [Fadhyoung](https://github.com/Fadhyoung)
 - Email: fadhlinurhimawan@gmail.com
 
