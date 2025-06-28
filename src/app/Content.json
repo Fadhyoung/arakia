@@ -44,6 +44,13 @@
         }
     ]
     ,
+    "Client": [
+        {
+            "company": "Rumah Sakit Maguan Husada",
+            "logo": "client_logo_1",
+            "contact": "ph  one contact"
+        }
+    ],
     "Mission": [
         {
             "title": "Keilmuan, dan Riset",

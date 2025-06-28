@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar1 } from "../components/Navbars";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { BaseProvider } from "providers/BaseProvider";
@@ -16,6 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+
 export default async function RootLayout({
   children,
 }: {
@@ -29,8 +30,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased bg-white`}
       >
         <NextIntlClientProvider>
-          <BaseProvider>
-            <Navbar1 />
+          <BaseProvider>            
             {children}
             <TreeModal />
           </BaseProvider>
