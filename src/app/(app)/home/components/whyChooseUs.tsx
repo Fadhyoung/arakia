@@ -55,8 +55,7 @@ export const WhyChooseUsPage = () => {
                 </li>
                 <li>
                   <Typography variant="md" color="primary">
-                    Satu-satunya Konsultan yang Memiliki Pricelist Tiap Item
-                    Layanan
+                    Satu-satunya Konsultan yang Memiliki Pricelist Tiap Item Layanan
                   </Typography>
                 </li>
                 <li>
