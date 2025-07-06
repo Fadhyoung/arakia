@@ -77,7 +77,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
                   size="md"
                   hidden
                 >
-                  {t("konsultant")}
+                  {t("contactUs")}
                 </Button>
                 <Button
                   onClick={() => scrollToTarget()}
@@ -168,7 +168,7 @@ export const LandingPage1 = ({ t, scrollToTarget }: LandingPageProps) => {
               variant="tertiary"
               radius="xl"
               buttonType="solid"
-              label={t("contact")}
+              label={t("contactUs")}
               size="xl"
               className="text-xl text-black font-semibold"
             />

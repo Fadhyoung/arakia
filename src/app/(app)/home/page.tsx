@@ -4,6 +4,7 @@ import React from "react";
 
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import LandingPage1 from "./components/entranceScreen";
+import WhyChooseUsPage from "./components/whyChooseUs";
 import Typography from "@/components/Typography";
 import Footer from "@/components/Footer";
 import { Body } from "@/components/body";
@@ -11,12 +12,24 @@ import Button from "@/components/Button";
 import useHome from "./hooks";
 
 export default function Home() {
-  const { t, targetRef, Content, data, activeIndex, scrollToTarget, handleLeftClick, handleRightClick, setRef } =
-    useHome();
+  const {
+    t,
+    targetRef,
+    Content,
+    data,
+    activeIndex,
+    scrollToTarget,
+    handleLeftClick,
+    handleRightClick,
+    setRef,
+  } = useHome();
   return (
     <>
       <div className="w-full max-w-[2024px] lg:m-auto xs:m-0 grid grid-cols-1 lg:gap-20 xs:gap-0 place-content-center place-items-center">
         <LandingPage1 t={t} scrollToTarget={scrollToTarget} />
+
+        {/* WHY CHOOSE US */}
+        <WhyChooseUsPage  />
 
         {/** CONTINUESNESS LINE */}
         <div

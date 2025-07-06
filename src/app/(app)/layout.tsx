@@ -1,10 +1,17 @@
 "use client";
 
 import Button from "@/components/Button";
+import { MenuItems, Navbar1 } from "@/components/Navbars";
 import Typography from "@/components/Typography";
 import { WA_NUMBER } from "constants/otherWeb";
+import { ROUTE_HOME } from "constants/routes";
 import * as React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaHome, FaWhatsapp } from "react-icons/fa";
+
+const menuItems: MenuItems[] = [
+  { title: 'Home', icon: <FaHome />, href: ROUTE_HOME },
+  { title: 'Layanan', icon: <FaHome />, href: ROUTE_HOME },
+];
 
 export default function LayoutPage({
   children,
@@ -13,6 +20,7 @@ export default function LayoutPage({
 }) {
   return (
     <>
+    <Navbar1 contents={[{group : 'Main', items: menuItems}]} />
       {children}
       <Button
         radius="md"

@@ -5,6 +5,106 @@
     "CompanyValue": [
         "Kerja Cepat", "Amanah", "Berkelanjutan"
     ],
+    "Consultations": [
+        {
+            "title": "KONSULTAN BANGUNAN GEDUNG (PBG-IMB)",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaBuilding",
+            "url": "/konsultan/list-project",
+            "description": "Persetujuan Bangunan Gedung (PBG) adalah Perizinan yang dikeluarkan dari pemerintah kepada pemilik sebuah bangunan gedung atau perwakilannya untuk memulai pembangunan, merenovasi, merawat, atau mengubah bangunan gedung tersebut sesuai dengan yang direncanakan. Dan juga diterbitkan apabila rencana teknis yang diajukan memenuhi standar ketentuan peraturan perundang-undangan, untuk mengetahui apakah rencana teknis tersebut memenuhi standar teknis atau tidak, diperlukan sebuah proses konsultasi yang melibatkan tenaga ahli yang memiliki kemampuan dan keahlian terkait bangunan gedung.",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN LEGALITAS USAHA",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaBook",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN LINGKUNGAN (SPPL, UKL UPL, AMDAL)",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaSeedling",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN TATA RUANG",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaDiceD6",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN ANDALALIN",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaTrafficLight",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN PERENCANAAN SITEPLAN",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaSitemap",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        },
+        {
+            "title": "KONSULTAN PERENCANAAN ARSITEKTUR",
+            "path": "konsultan-bangunan-gedung",
+            "icon": "FaRulerCombined",
+            "url": "/konsultan/list-project",
+            "description": "",
+            "services": [
+                "PEMBUATAN GAMBAR LENGKAP PENGAJUAN PBG",
+                "KONSULTAN PERMOHONAN PBG",
+                "PENYEDIAAN TENAGA AHLI PENGKAJI TEKNIS",
+                "PENGURUSAN REKOM/ PERTEK TERKAAIT KEBUTUHAN SYARAT PBG",
+                "PENYEDIAAN KEBUTUHAN PENGUJIAN DAN PERHITUNGAN TERKAIT PBG"
+            ]
+        }
+    ],
     "CompanyFeatures": [
         {
             "title": "Perizinan Lingkungan",
@@ -44,6 +144,13 @@
         }
     ]
     ,
+    "Client": [
+        {
+            "company": "Rumah Sakit Maguan Husada",
+            "logo": "client_logo_1",
+            "contact": "ph  one contact"
+        }
+    ],
     "Mission": [
         {
             "title": "Keilmuan, dan Riset",

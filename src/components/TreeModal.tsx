@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/navigation";
-import { CONSULTANT, HOME, LIST_PROJECT } from "constants/routes";
+import { CONSULTANT, ROUTE_HOME, LIST_PROJECT } from "constants/routes";
 
 export interface ModalResultProps {
   callback?: () => void;
@@ -51,7 +51,7 @@ export default function TreeModal({ callback }: ModalResultProps) {
           />
           <Button
             size="lg"
-            onClick={() => goToPage(HOME)}
+            onClick={() => goToPage(ROUTE_HOME)}
             label={t("home")}
             variant="secondary"
             radius="md"
