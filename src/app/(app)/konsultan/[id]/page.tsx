@@ -4,11 +4,13 @@ import Content from "@/app/Content.json";
 
 export { generateStaticParams };
 
-export default function DetailConsultanPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function DetailConsultanPage({ params }: PageProps) {
   const consultant = Content.Consultations.find((item) => item.path === params.id);
 
   if (!consultant) {
